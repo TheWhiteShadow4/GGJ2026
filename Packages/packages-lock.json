@@ -11,7 +11,7 @@
       "depth": 0,
       "source": "embedded",
       "dependencies": {
-        "com.tws.utils": "1.0.1"
+        "com.tws.utils": "1.0.0"
       }
     },
     "com.tws.utils": {
