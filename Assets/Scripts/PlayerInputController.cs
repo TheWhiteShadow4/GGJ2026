@@ -32,7 +32,7 @@ public class PlayerInputController
 	private void OnLook(InputAction.CallbackContext context)
 	{
 		lookDirection = context.ReadValue<Vector2>();
-		//lookDirection += PlayerController.Current.transform.position.Vec2();
+		lookDirection += PlayerController.Current.transform.position.Vec2();
 		PlayerController.Current.transform.LookAt(lookDirection);
 	}
 

@@ -18,13 +18,22 @@ public class Enemy : MonoBehaviour, IEnemy
         Health = GetComponentInChildren<IHealth>();
         DamageSource = GetComponentInChildren<IDamageSource>();
     }
-}
 
-public enum ElementType
-{
-    None = 0,
-    Fire,
-    Water,
-    Air,
-    Earth
+    /// <summary>
+    /// Called bia UnityEvent.
+    /// </summary>
+    public void Died() 
+    {
+        Debug.Log($"Enemy {name} Died.");
+        GameObject.Destroy(gameObject);
+    }
+
+    /// <summary>
+    /// Called bia UnityEvent.
+    /// </summary>
+    /// <param name="damage">Damage source.</param>
+    public void GotHit(IDamageSource damage) 
+    {
+        Debug.Log($"Got {damage} damage. {Health.Hp} HP left.");
+    }
 }
