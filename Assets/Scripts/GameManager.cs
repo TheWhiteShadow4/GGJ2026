@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 	public static GameManager Instance { get; private set; }
 
 	public bool wasLoaded = false;
+	public Controls controls;
 
 	void Awake()
 	{
@@ -18,6 +19,8 @@ public class GameManager : MonoBehaviour
 		Instance = this;
 		DontDestroyOnLoad(gameObject);
 		GameProgress.Current = new GameProgress(20);
+		controls = new Controls();
+		controls.Enable();
 	}
 
 	public void SaveGame()
