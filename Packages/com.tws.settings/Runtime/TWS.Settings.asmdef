@@ -1,0 +1,25 @@
+{
+    "name": "TWS.Settings",
+    "rootNamespace": "TWS.Settings",
+    "references": [
+        "TWS.Utils",
+        "Unity.RenderPipelines.Universal.Runtime",
+        "Unity.TextMeshPro",
+        "TWS.Localization"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.tws.localization",
+            "expression": "1.0",
+            "define": "TWS_LOCALISATION"
+        }
+    ],
+    "noEngineReferences": false
+}
