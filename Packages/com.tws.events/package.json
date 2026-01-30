@@ -1,0 +1,16 @@
+{
+  "name": "com.tws.events",
+  "version": "1.0.0",
+  "displayName": "Events",
+  "description": "Ein einfaches aber flexibles Eventsystem",
+  "unity": "6000.1",
+  "dependencies": {
+  },
+  "keywords": [
+    "events"
+  ],
+  "author": {
+    "name": "TheWhiteShadow",
+    "email": "yinera.game@gmail.com"
+  }
+} 
