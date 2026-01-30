@@ -1,0 +1,20 @@
+{
+  "name": "com.tws.settings",
+  "version": "1.0.1",
+  "displayName": "TWS Settings",
+  "description": "Ein System f\u00fcr Spieleinstellungen und Konfigurationen",
+  "unity": "6000.1",
+  "dependencies": {
+    "com.tws.utils": "1.0.0"
+  },
+  "author": {
+    "name": "TheWhiteShadow",
+    "url": "https://github.com/TheWhiteShadow4"
+  },
+  "license": "MPL-2.0",
+  "licensesUrl": "https://mozilla.org/MPL/2.0/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DEIN_USERNAME/com.tws.settings.git"
+  }
+}
