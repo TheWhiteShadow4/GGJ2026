@@ -1,16 +1,30 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IEnemy
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] ElementType _element;
 
-    // Update is called once per frame
-    void Update()
+    /// <inheritdoc cref="IPlayer.Health"/>
+    public IHealth Health { get; private set; }
+
+    /// <inheritdoc cref="IPlayer.DamageSource"/>
+    public IDamageSource DamageSource { get; private set; }
+
+    /// <inheritdoc cref="IPlayer.Element"/>
+    public ElementType Element => _element;
+
+    private void Awake()
     {
-        
+        Health = GetComponentInChildren<IHealth>();
+        DamageSource = GetComponentInChildren<IDamageSource>();
     }
+}
+
+public enum ElementType
+{
+    None = 0,
+    Fire,
+    Water,
+    Air,
+    Earth
 }

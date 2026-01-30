@@ -1,17 +1,12 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, IEnemy
+public class PlayerCharacter : MonoBehaviour, IPlayer
 {
-    [SerializeField] ElementType _element;
-
     /// <inheritdoc cref="IPlayer.Health"/>
     public IHealth Health { get; private set; }
 
     /// <inheritdoc cref="IPlayer.DamageSource"/>
     public IDamageSource DamageSource { get; private set; }
-
-    /// <inheritdoc cref="IPlayer.Element"/>
-    public ElementType Element => _element;
 
     private void Awake()
     {
