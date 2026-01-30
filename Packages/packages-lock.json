@@ -6,6 +6,20 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "com.tws.settings": {
+      "version": "file:com.tws.settings",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.tws.utils": "1.0.1"
+      }
+    },
+    "com.tws.utils": {
+      "version": "file:com.tws.utils",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.9",
       "depth": 0,
