@@ -3,7 +3,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour, IEnemy
 {
     Health _health;
-    [SerializeField] float _knockbackResistance;
+    [SerializeField] float _knockbackResistance = 0;
+    [SerializeField] float _knockbackCooldown = 0.0f;
+    private float? _lastKnockbackTime = null;
     ShootComponent _shootComponent;
 
     /// <inheritdoc cref="IPlayer.Health"/>
@@ -14,6 +16,9 @@ public class Enemy : MonoBehaviour, IEnemy
 
     /// <inheritdoc cref="IKnockbackTarget.KnockbackResistance"/>
     public float KnockbackResistance => _knockbackResistance;
+
+    /// <inheritdoc cref="IKnockbackTarget.KnockbackCooldown"/>
+    public float KnockbackCooldown => _knockbackCooldown;
 
     [SerializeField] bool _drawGizmos = false;
     [SerializeField] float _aggressionRange = 20f;
@@ -44,6 +49,7 @@ public class Enemy : MonoBehaviour, IEnemy
     private void Update()
     {
         var playerDir = _player.gameObject.transform.position - gameObject.transform.position;
+        playerDir = new Vector3(playerDir.x, 0, playerDir.z);
 
         Vector3 impactMovement = Vector3.zero;
         Vector3 movement = Vector3.zero;
@@ -57,7 +63,7 @@ public class Enemy : MonoBehaviour, IEnemy
         if (_aggro)
         {
             //TODO add more dynamic pathfinding in case we use more complex level with walls and obstacles
-            transform.LookAt(_player.gameObject.transform.position);
+            //transform.LookAt(_player.gameObject.transform.position);
 
             if (HasShootComponent)
             {
@@ -86,9 +92,12 @@ public class Enemy : MonoBehaviour, IEnemy
 
     public void ApplyKnockback(Vector3 direction, float strength)
     {
-        Vector3 knockbackForce = direction * strength * (1 - _knockbackResistance);
+        if (_lastKnockbackTime != null && (Time.time - _lastKnockbackTime) < _knockbackCooldown)
+            return;
 
+        Vector3 knockbackForce = direction * strength * (1 - _knockbackResistance);
         impactForce += knockbackForce;
+        _lastKnockbackTime = Time.time;
     }
 
     private void ShootAtThePlayer() 
