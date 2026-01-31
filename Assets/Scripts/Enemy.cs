@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour, IEnemy
 
     [SerializeField] bool _drawGizmos = false;
     [SerializeField] float _aggressionRange = 20f;
-    [SerializeField] float _speed = 0.01f;
+    [SerializeField] float _speed = 1f;
     [SerializeField] float _fireRate = 1f;
 
     private bool _aggro = false;
@@ -51,13 +51,13 @@ public class Enemy : MonoBehaviour, IEnemy
                 // come closer
                 if (playerDir.magnitude < _aggressionRange)
                 {
-                    transform.position += playerDir.normalized * _speed;
+                    transform.position += playerDir.normalized * _speed * Time.deltaTime;
                 }
             }
             else
             {
                 // try to deathly touch the player
-                transform.position += playerDir.normalized * _speed;
+                transform.position += playerDir.normalized * _speed * Time.deltaTime;
             }
         }
         else
