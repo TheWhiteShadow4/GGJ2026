@@ -5,8 +5,9 @@ public class Health : MonoBehaviour, IHealth
 {
     [SerializeField] float _hp;
     [SerializeField] float _maxHp;
-    [SerializeField] UnityEvent<IDamageSource> _hitEvent;
+    [SerializeField] UnityEvent<ElementType, float> _hitEvent;
     [SerializeField] UnityEvent _deathEvent;
+    IDamageResistance _resistance;
 
     /// <inheritdoc cref="IHealth.MaxHp"/>
     public float MaxHp => _maxHp;
@@ -14,11 +15,17 @@ public class Health : MonoBehaviour, IHealth
     /// <inheritdoc cref="IHealth.Hp"/>
     public float Hp => _hp;
 
+    private void Awake()
+    {
+        _resistance = transform.root.GetComponentInChildren<IDamageResistance>();
+    }
+
     public void DoDamage(IDamageSource damage)
     {
-        _hp -= damage.Damage;
+        var dmg = damage.Damage * _resistance.GetMultiplier(damage.Type);
+        _hp -= dmg;
 
-        _hitEvent?.Invoke(damage);
+        _hitEvent?.Invoke(damage.Type, dmg);
         if (_hp <= 0)
         {
             _deathEvent?.Invoke();
