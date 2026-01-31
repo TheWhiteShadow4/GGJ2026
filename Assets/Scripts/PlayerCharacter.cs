@@ -6,7 +6,9 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
 
     Health _health;
 
-    [SerializeField] float _knockbackResistance;
+    [SerializeField] float _knockbackResistance = 0;
+    [SerializeField] float _knockbackCooldown = 0.5f;
+    private float? _lastKnockbackTime = null;
 
     /// <inheritdoc cref="IPlayer.Health"/>
     public IHealth Health => _health;
@@ -16,6 +18,9 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
 
     /// <inheritdoc cref="IKnockbackTarget.KnockbackResistance"/>
     public float KnockbackResistance => _knockbackResistance;
+
+    /// <inheritdoc cref="IKnockbackTarget.KnockbackCooldown"/>
+    public float KnockbackCooldown => _knockbackCooldown;
 
     private int currentMaskIndex = -1;
 
@@ -50,8 +55,12 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
 
     public void ApplyKnockback(Vector3 direction, float strength)
     {
+        if (_lastKnockbackTime != null && (Time.time - _lastKnockbackTime) < _knockbackCooldown)
+            return;
+
         Vector3 knockbackForce = direction * strength * (1 - _knockbackResistance);
         gameObject.transform.root.GetComponentInChildren<PlayerController>().ApplyImpactForce(knockbackForce);
+        _lastKnockbackTime = Time.time;
     }
 
 	public void OnChangeMask(int index)

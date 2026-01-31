@@ -51,6 +51,7 @@ public class Health : MonoBehaviour, IHealth
                 if (damageSource.AppliesKnockback)
                 {
                     Vector3 knockbackDirection = transform.root.transform.position - other.gameObject.transform.position;
+                    knockbackDirection = new Vector3(knockbackDirection.x, 0, knockbackDirection.z);
                     _character.ApplyKnockback(knockbackDirection, damageSource.KnockbackStrength);
                 }
 			}

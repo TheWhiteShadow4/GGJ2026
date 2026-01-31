@@ -87,6 +87,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageComponent
   _type: 4
   _damage: 6
+  _appliesKnockback: 1
+  _knockbackStrength: 8
 --- !u!54 &1466936369742036481
 Rigidbody:
   m_ObjectHideFlags: 0
