@@ -774,17 +774,17 @@ LineRenderer:
   m_MaskInteraction: 0
   m_Positions:
   - {x: 0.5, y: 0.656, z: 0}
-  - {x: 0.83535594, y: 0.68500894, z: 0.18192564}
-  - {x: 0.97225446, y: 0.5945934, z: -0.18547788}
-  - {x: 1.310831, y: 0.7677653, z: 0.16136685}
-  - {x: 1.398995, y: 0.61950594, z: 0.14664884}
-  - {x: 1.9502537, y: 0.7575252, z: 0.05660252}
-  - {x: 1.9489195, y: 0.6040794, z: -0.16754933}
-  - {x: 2.249356, y: 0.665338, z: 0.19258384}
-  - {x: 2.6197755, y: 0.71999025, z: -0.17981139}
-  - {x: 2.7127452, y: 0.4902941, z: -0.039598204}
-  - {x: 2.9728312, y: 0.7239757, z: 0.1579269}
-  - {x: 3.2047234, y: 0.80985844, z: -0.00087006093}
+  - {x: 0.70167834, y: 0.48158306, z: 0.08039078}
+  - {x: 1.0898372, y: 0.51461375, z: -0.1200388}
+  - {x: 1.3928965, y: 0.7844363, z: -0.094914794}
+  - {x: 1.6401414, y: 0.7179368, z: -0.15502487}
+  - {x: 1.8273356, y: 0.7625339, z: -0.16451035}
+  - {x: 1.9788797, y: 0.46983278, z: -0.031142736}
+  - {x: 2.3215983, y: 0.4573006, z: -0.012401462}
+  - {x: 2.4493988, y: 0.6046145, z: -0.15851474}
+  - {x: 2.6656451, y: 0.54395837, z: 0.06623282}
+  - {x: 3.192612, y: 0.7251963, z: 0.14621654}
+  - {x: 3.2386723, y: 0.76044965, z: -0.14243113}
   - {x: 3.59, y: 0.656, z: 0}
   m_Parameters:
     serializedVersion: 3
@@ -1035,8 +1035,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3749a36b8d15544b8b80558b7db9adb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FireCannon
-  fireBeam: {fileID: 319309083}
-  fireCollider: {fileID: 1741898922}
+  fireBeam: {fileID: 319309086}
+  fireCollider: {fileID: 1741898923}
+  fireRate: 96
 --- !u!1 &558944176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,17 +1485,17 @@ LineRenderer:
   m_MaskInteraction: 0
   m_Positions:
   - {x: 4.64, y: 0.656, z: 2.03}
-  - {x: 4.831163, y: 0.77706116, z: 2.0980818}
-  - {x: 5.128009, y: 0.51278794, z: 1.7855141}
-  - {x: 5.3737226, y: 0.66677254, z: 1.8228273}
-  - {x: 5.3959785, y: 0.519578, z: 1.5233843}
-  - {x: 5.5802546, y: 0.8258782, z: 1.6764436}
-  - {x: 5.6693387, y: 0.7119356, z: 1.3028147}
-  - {x: 5.7777843, y: 0.80457866, z: 1.3940328}
-  - {x: 6.1095734, y: 0.77829105, z: 1.4607536}
-  - {x: 6.306107, y: 0.8418272, z: 1.2795864}
-  - {x: 6.2864943, y: 0.5797396, z: 1.1939561}
-  - {x: 6.7457433, y: 0.48903805, z: 1.0550579}
+  - {x: 4.9944415, y: 0.704445, z: 1.8508383}
+  - {x: 5.0487666, y: 0.77133083, z: 2.0052874}
+  - {x: 5.1663384, y: 0.841006, z: 1.8311515}
+  - {x: 5.535581, y: 0.6338254, z: 1.5618995}
+  - {x: 5.470443, y: 0.6917745, z: 1.7565355}
+  - {x: 5.812113, y: 0.7405282, z: 1.3234067}
+  - {x: 6.004009, y: 0.48617417, z: 1.4454701}
+  - {x: 5.9120326, y: 0.6200887, z: 1.3797556}
+  - {x: 6.4215274, y: 0.7865928, z: 1.1740932}
+  - {x: 6.4859347, y: 0.533871, z: 1.2773197}
+  - {x: 6.5519304, y: 0.64869785, z: 0.85060775}
   - {x: 6.8199997, y: 0.656, z: 0.93999994}
   m_Parameters:
     serializedVersion: 3
@@ -2322,17 +2323,17 @@ LineRenderer:
   m_MaskInteraction: 0
   m_Positions:
   - {x: 3.65, y: 0.656, z: -0.27}
-  - {x: 3.6631541, y: 0.5048783, z: 0.018598706}
-  - {x: 4.000391, y: 0.5883074, z: 0.17490423}
-  - {x: 4.012571, y: 0.5233031, z: 0.39506775}
-  - {x: 4.0753407, y: 0.61212415, z: 0.27613723}
-  - {x: 4.2912626, y: 0.6939649, z: 0.59803385}
-  - {x: 4.370234, y: 0.6243316, z: 0.7442979}
-  - {x: 4.4553576, y: 0.6712119, z: 0.9125351}
-  - {x: 4.1746807, y: 0.65267, z: 1.2328882}
-  - {x: 4.4383984, y: 0.6089908, z: 1.565693}
-  - {x: 4.6392164, y: 0.56519824, z: 1.4007422}
-  - {x: 4.748475, y: 0.6420237, z: 1.9049449}
+  - {x: 3.7618604, y: 0.7839643, z: -0.23964223}
+  - {x: 3.9393656, y: 0.75551295, z: 0.22967133}
+  - {x: 3.9069426, y: 0.55053383, z: 0.10807042}
+  - {x: 4.1942725, y: 0.6849192, z: 0.38783735}
+  - {x: 4.182567, y: 0.62598246, z: 0.4628291}
+  - {x: 4.2392516, y: 0.47244912, z: 0.76268345}
+  - {x: 4.441473, y: 0.7119227, z: 0.90358114}
+  - {x: 4.3380036, y: 0.6226909, z: 0.99540627}
+  - {x: 4.479566, y: 0.49167258, z: 1.2601895}
+  - {x: 4.537588, y: 0.783824, z: 1.7083199}
+  - {x: 4.516773, y: 0.8134339, z: 1.7429522}
   - {x: 4.73, y: 0.656, z: 1.9200001}
   m_Parameters:
     serializedVersion: 3
@@ -2427,11 +2428,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageComponent
   _type: 1
   _damage: 2
---- !u!1 &1741898922 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5906991385967271041, guid: bfacccc25125a3341baac0eeea7ea0ef, type: 3}
+--- !u!114 &1741898923 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7245328971569346379, guid: bfacccc25125a3341baac0eeea7ea0ef, type: 3}
   m_PrefabInstance: {fileID: 4262059751108968544}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b47bd67d742b3942be1da87cba0d5fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FireCollider
 --- !u!4 &1741898924 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7451427416324473164, guid: bfacccc25125a3341baac0eeea7ea0ef, type: 3}
@@ -2704,6 +2711,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 532837881}
     m_Modifications:
+    - target: {fileID: 415030256251791408, guid: bfacccc25125a3341baac0eeea7ea0ef, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3426773316484981428, guid: bfacccc25125a3341baac0eeea7ea0ef, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5413686633849836102, guid: bfacccc25125a3341baac0eeea7ea0ef, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -2731,6 +2746,10 @@ PrefabInstance:
     - target: {fileID: 6481504757474532306, guid: bfacccc25125a3341baac0eeea7ea0ef, type: 3}
       propertyPath: m_TagString
       value: DamageSource
+      objectReference: {fileID: 0}
+    - target: {fileID: 7245328971569346379, guid: bfacccc25125a3341baac0eeea7ea0ef, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7451427416324473164, guid: bfacccc25125a3341baac0eeea7ea0ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2771,6 +2790,10 @@ PrefabInstance:
     - target: {fileID: 7451427416324473164, guid: bfacccc25125a3341baac0eeea7ea0ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8197616880601186562, guid: bfacccc25125a3341baac0eeea7ea0ef, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

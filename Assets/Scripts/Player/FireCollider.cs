@@ -18,19 +18,34 @@ public class FireCollider : MonoBehaviour
 
 	private float timer;
 
-    void Start()
+    void Awake()
     {
         usedColliders = 0;
 		velocities = new List<Vector3>();
 		lifetimes = new List<float>();
+		OnDisable();
+    }
+
+	void OnEnable()
+	{
+		timer = frequency;
 		for (int i = 0; i < colliders.Length; i++)
 		{
 			velocities.Add(Vector3.zero);
 			lifetimes.Add(0);
 			colliders[i].enabled = false;
 		}
-		timer = frequency;
-    }
+		usedColliders = 0;
+	}
+
+	void OnDisable()
+	{
+		for (int i = 0; i < colliders.Length; i++)
+		{
+			colliders[i].enabled = false;
+		}
+		usedColliders = 0;
+	}
 
     // Update is called once per frame
     void Update()

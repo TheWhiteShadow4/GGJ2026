@@ -19,10 +19,6 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
         _health = GetComponentInChildren<Health>();
         _health.HitEvent.AddListener(GotHit);
         _health.DeathEvent.AddListener(Died);
-		foreach (var mask in _playerMasks)
-		{
-			mask.gameObject.SetActive(false);
-		}
 		OnChangeMask(0);
     }
 
@@ -47,12 +43,7 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
 
 	public void OnChangeMask(int index)
 	{
-		if (currentMaskIndex != -1)
-		{
-			_playerMasks[currentMaskIndex].gameObject.SetActive(false);
-		}
 		currentMaskIndex = index;
-		_playerMasks[index].gameObject.SetActive(true);
 	}
 
 	public void Fire()
