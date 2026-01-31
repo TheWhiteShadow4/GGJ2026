@@ -11,19 +11,19 @@ PrefabInstance:
     - target: {fileID: 1900910083165723920, guid: 67641330ada34c24382e39f799102165, type: 3}
       propertyPath: _resistances
       value: 
-      objectReference: {fileID: 11400000, guid: 7e031b2aa52e2634596540a8bbc1be90, type: 2}
+      objectReference: {fileID: 11400000, guid: 27b46bc790a8e0e4fbe7d79c9e40f4be, type: 2}
     - target: {fileID: 2337639496112888773, guid: 67641330ada34c24382e39f799102165, type: 3}
       propertyPath: _element
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4545145071118812565, guid: 67641330ada34c24382e39f799102165, type: 3}
       propertyPath: m_Name
-      value: Enemy_Shooter_Fire
+      value: Enemy_Shooter_Water
       objectReference: {fileID: 0}
     - target: {fileID: 4728543303756482346, guid: 67641330ada34c24382e39f799102165, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 377c95a4d1c381649a088f6957441bbd, type: 2}
+      objectReference: {fileID: 2100000, guid: 22dcad96de3204a4aa687d0050b40be9, type: 2}
     - target: {fileID: 5050084649416332318, guid: 67641330ada34c24382e39f799102165, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -67,7 +67,7 @@ PrefabInstance:
     - target: {fileID: 6810447917852847800, guid: 67641330ada34c24382e39f799102165, type: 3}
       propertyPath: _projectile
       value: 
-      objectReference: {fileID: 1476450529551606393, guid: f11ef5d7b24e1934a9bb8f219fd8cee7, type: 3}
+      objectReference: {fileID: 1476450529551606393, guid: 2ea085dd935cf2144acedebcec1cb22f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
