@@ -111,7 +111,7 @@ MonoBehaviour:
   _element: 0
   _drawGizmos: 0
   _aggressionRange: 20
-  _speed: 0.01
+  _speed: 2
   _fireRate: 1
 --- !u!114 &438141643102147234
 MonoBehaviour:
@@ -195,7 +195,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1 &8452275234316761518
 GameObject:

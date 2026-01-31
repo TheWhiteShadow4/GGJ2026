@@ -13,6 +13,18 @@ public class Blitz : MonoBehaviour
 	public float interval = 0.1f;
 	private float timer;
 
+	void OnEnable()
+	{
+		timer = 0;
+		lineRenderer.enabled = true;
+		UpdateLineRenderer();
+	}
+
+	void OnDisable()
+	{
+		lineRenderer.enabled = false;
+	}
+
     // Update is called once per frame
     void LateUpdate()
     {
