@@ -677,6 +677,7 @@ MonoBehaviour:
   - {fileID: 4132940587947164372}
   - {fileID: 4974913193530546165}
   - {fileID: 4132940587947164372}
+  _knockbackResistance: 0
 --- !u!114 &8877116226689860403
 MonoBehaviour:
   m_ObjectHideFlags: 0
