@@ -266,3 +266,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageComponent
   _type: 0
   _damage: 5
+  _appliesKnockback: 1
+  _knockbackStrength: 10
