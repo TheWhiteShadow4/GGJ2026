@@ -5,6 +5,7 @@ public class FireCannon : PlayerWeapon
 {
 	public VisualEffect fireBeam;
 	public FireCollider fireCollider;
+	public Light fireLight;
 	public int fireRate = 96;
 
 	private bool isFiring = false;
@@ -12,6 +13,7 @@ public class FireCannon : PlayerWeapon
 	void Start()
 	{
 		fireCollider.enabled = false;
+		fireLight.enabled = false;
 	}
 
 	public override void Fire()
@@ -22,6 +24,7 @@ public class FireCannon : PlayerWeapon
 		fireCollider.transform.parent = null;
 		fireCollider.transform.position = new Vector3(0, 0, 0);
 		fireCollider.enabled = true;
+		fireLight.enabled = true;
 	}
 
 	public override void Stop()
@@ -30,5 +33,6 @@ public class FireCannon : PlayerWeapon
 		isFiring = false;
 		fireBeam.SetInt("Rate", 0);
 		fireCollider.enabled = false;
+		fireLight.enabled = false;
 	}
 }

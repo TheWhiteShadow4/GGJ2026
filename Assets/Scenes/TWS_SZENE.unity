@@ -546,17 +546,17 @@ LineRenderer:
   m_MaskInteraction: 0
   m_Positions:
   - {x: 0.5, y: 0.656, z: 0}
-  - {x: 0.65046996, y: 0.765769, z: -0.12843418}
-  - {x: 1.0515293, y: 0.473518, z: -0.07325246}
-  - {x: 1.1189116, y: 0.55649537, z: -0.08068111}
-  - {x: 1.4593042, y: 0.5807671, z: -0.1712954}
-  - {x: 1.7651063, y: 0.7111158, z: 0.19094706}
-  - {x: 1.993602, y: 0.5482113, z: 0.16043639}
-  - {x: 2.1976275, y: 0.57636476, z: -0.15053259}
-  - {x: 2.622262, y: 0.56172806, z: -0.16503401}
-  - {x: 2.6270416, y: 0.6105627, z: -0.04075682}
-  - {x: 2.934763, y: 0.56381243, z: -0.10878926}
-  - {x: 3.4055, y: 0.5507264, z: 0.15358539}
+  - {x: 0.79200375, y: 0.7147023, z: 0.18805194}
+  - {x: 0.9846632, y: 0.4988137, z: 0.11988387}
+  - {x: 1.2746668, y: 0.64960784, z: -0.19988608}
+  - {x: 1.5319594, y: 0.5126227, z: -0.13942423}
+  - {x: 1.664779, y: 0.81387967, z: 0.0036847831}
+  - {x: 1.9197661, y: 0.8119028, z: -0.0032820941}
+  - {x: 2.21285, y: 0.8229714, z: -0.063902356}
+  - {x: 2.52818, y: 0.66410816, z: -0.19728594}
+  - {x: 2.9457297, y: 0.80948246, z: -0.0005175829}
+  - {x: 3.198701, y: 0.6777126, z: 0.15564899}
+  - {x: 3.2538702, y: 0.80807674, z: 0.103392504}
   - {x: 3.59, y: 0.656, z: 0}
   m_Parameters:
     serializedVersion: 3
@@ -728,17 +728,6 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!114 &532837882 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4974913193530546165, guid: 271b4405809f94b448bb6d308cb21927, type: 3}
-  m_PrefabInstance: {fileID: 5928241915353089112}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a2024fd938806d409a850adbc56e0d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMask
 --- !u!1 &558944176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,17 +1156,17 @@ LineRenderer:
   m_MaskInteraction: 0
   m_Positions:
   - {x: 4.64, y: 0.656, z: 2.03}
-  - {x: 4.749651, y: 0.8061155, z: 2.0499778}
-  - {x: 4.851472, y: 0.5265348, z: 1.8616362}
-  - {x: 5.1432443, y: 0.4605809, z: 1.7492645}
-  - {x: 5.2870865, y: 0.8020744, z: 1.7777042}
-  - {x: 5.7164693, y: 0.7446432, z: 1.6380635}
-  - {x: 5.8913207, y: 0.7480268, z: 1.4107934}
-  - {x: 6.0304213, y: 0.500404, z: 1.3530911}
-  - {x: 6.1311336, y: 0.56892306, z: 1.127297}
-  - {x: 6.3023157, y: 0.59839153, z: 1.4020655}
-  - {x: 6.5897403, y: 0.701174, z: 1.2639713}
-  - {x: 6.6951876, y: 0.8343793, z: 1.1011784}
+  - {x: 4.9029837, y: 0.57840705, z: 2.1045961}
+  - {x: 4.996306, y: 0.53137743, z: 1.6920648}
+  - {x: 5.355979, y: 0.7147073, z: 1.8430552}
+  - {x: 5.2423964, y: 0.52557707, z: 1.753539}
+  - {x: 5.7339334, y: 0.63464975, z: 1.5044426}
+  - {x: 5.6857, y: 0.8510321, z: 1.4848036}
+  - {x: 5.9874797, y: 0.69556665, z: 1.5749615}
+  - {x: 6.13361, y: 0.6301906, z: 1.4975283}
+  - {x: 6.395359, y: 0.5009099, z: 1.1742811}
+  - {x: 6.3425074, y: 0.6479367, z: 0.9576463}
+  - {x: 6.8289824, y: 0.6403514, z: 0.9724543}
   - {x: 6.8199997, y: 0.656, z: 0.93999994}
   m_Parameters:
     serializedVersion: 3
@@ -1302,17 +1291,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &933049212 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4132940587947164372, guid: 271b4405809f94b448bb6d308cb21927, type: 3}
-  m_PrefabInstance: {fileID: 5928241915353089112}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a2024fd938806d409a850adbc56e0d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMask
 --- !u!1 &1058770919 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 36f153e784194be4d8383f1c8228a56e, type: 3}
@@ -1754,17 +1732,17 @@ LineRenderer:
   m_MaskInteraction: 0
   m_Positions:
   - {x: 3.65, y: 0.656, z: -0.27}
-  - {x: 3.8899803, y: 0.78507143, z: -0.058406327}
-  - {x: 3.9274926, y: 0.83050877, z: 0.08852349}
-  - {x: 3.7567847, y: 0.5672317, z: 0.3515334}
-  - {x: 3.842628, y: 0.7460295, z: 0.39770034}
-  - {x: 4.006454, y: 0.7467067, z: 0.7942283}
-  - {x: 4.3856583, y: 0.6932974, z: 0.8069254}
-  - {x: 4.426063, y: 0.7925799, z: 1.0040898}
-  - {x: 4.423686, y: 0.59907186, z: 1.374057}
-  - {x: 4.471175, y: 0.74651694, z: 1.5504938}
-  - {x: 4.6033397, y: 0.7675281, z: 1.7122146}
-  - {x: 4.744165, y: 0.50439745, z: 1.6589744}
+  - {x: 3.6957068, y: 0.8407502, z: -0.02500625}
+  - {x: 3.9899125, y: 0.56464887, z: 0.17299354}
+  - {x: 3.8640733, y: 0.586549, z: 0.45652163}
+  - {x: 3.9405754, y: 0.8409566, z: 0.49116474}
+  - {x: 3.9413092, y: 0.5774625, z: 0.5494992}
+  - {x: 4.3146305, y: 0.5007607, z: 0.8441837}
+  - {x: 4.3675346, y: 0.48219222, z: 0.9613639}
+  - {x: 4.1896577, y: 0.7320926, z: 1.1489317}
+  - {x: 4.2950044, y: 0.7665606, z: 1.3960098}
+  - {x: 4.685278, y: 0.61048734, z: 1.414898}
+  - {x: 4.624612, y: 0.5673821, z: 1.5588661}
   - {x: 4.73, y: 0.656, z: 1.9200001}
   m_Parameters:
     serializedVersion: 3
@@ -2016,30 +1994,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -7053522559661250255, guid: 271b4405809f94b448bb6d308cb21927, type: 3}
-      propertyPath: _playerMasks.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: -7053522559661250255, guid: 271b4405809f94b448bb6d308cb21927, type: 3}
-      propertyPath: '_playerMasks.Array.data[0]'
-      value: 
-      objectReference: {fileID: 532837882}
-    - target: {fileID: -7053522559661250255, guid: 271b4405809f94b448bb6d308cb21927, type: 3}
-      propertyPath: '_playerMasks.Array.data[1]'
-      value: 
-      objectReference: {fileID: 933049212}
-    - target: {fileID: -7053522559661250255, guid: 271b4405809f94b448bb6d308cb21927, type: 3}
-      propertyPath: '_playerMasks.Array.data[2]'
-      value: 
-      objectReference: {fileID: 532837882}
-    - target: {fileID: -7053522559661250255, guid: 271b4405809f94b448bb6d308cb21927, type: 3}
-      propertyPath: '_playerMasks.Array.data[3]'
-      value: 
-      objectReference: {fileID: 933049212}
-    - target: {fileID: 2401855694955269644, guid: 271b4405809f94b448bb6d308cb21927, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: b83254fbe3e5c0d4aa282003b2d27e21, type: 2}
     - target: {fileID: 2719692085670332513, guid: 271b4405809f94b448bb6d308cb21927, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2095,6 +2049,10 @@ PrefabInstance:
     - target: {fileID: 5950169926618016518, guid: 271b4405809f94b448bb6d308cb21927, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994219681628090852, guid: 271b4405809f94b448bb6d308cb21927, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8877116226689860403, guid: 271b4405809f94b448bb6d308cb21927, type: 3}
       propertyPath: m_Enabled
