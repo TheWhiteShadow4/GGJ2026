@@ -40,6 +40,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Water
       objectReference: {fileID: 0}
+    - target: {fileID: 3005321666067813403, guid: 8b068c0abbc2b2045889fbdfc5bdcacd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -263250949, guid: b204d94ca5ba5d1488dc663605808f9d, type: 3}
     - target: {fileID: 3579959601141061258, guid: 8b068c0abbc2b2045889fbdfc5bdcacd, type: 3}
       propertyPath: _type
       value: 2

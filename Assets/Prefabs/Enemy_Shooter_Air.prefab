@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: _element
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3873368388799830953, guid: 67641330ada34c24382e39f799102165, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2022415163, guid: b0cc9487ad53cb5459ef1a5ddacb43fc, type: 3}
     - target: {fileID: 4545145071118812565, guid: 67641330ada34c24382e39f799102165, type: 3}
       propertyPath: m_Name
       value: Enemy_Shooter_Air
