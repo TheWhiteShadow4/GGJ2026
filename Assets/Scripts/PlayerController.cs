@@ -6,9 +6,13 @@ public class PlayerController : MonoBehaviour
 {
 	public static PlayerController Current;
 
+	public IceCannon iceCannon;
+
 	public float moveSpeed = 5f;
 
 	private PlayerInputController playerInputController = new PlayerInputController();
+
+	private bool isAttacking = false;
 
 	void Awake()
 	{
@@ -52,11 +56,16 @@ public class PlayerController : MonoBehaviour
 		Vector3 velocity = new Vector3(playerInputController.moveDirection.x, 0, playerInputController.moveDirection.y) * moveSpeed;
 		Vector3 movement = velocity * Time.deltaTime;
 		transform.Translate(movement, Space.World);
+
+		if (isAttacking)
+		{
+			iceCannon.Fire();
+		}
 	}
 
 	private void OnAttack(InputAction.CallbackContext context)
 	{
-		Debug.Log("Attack");
+		isAttacking = context.ReadValueAsButton();
 	}
 
 	private void OnBlock(InputAction.CallbackContext context)

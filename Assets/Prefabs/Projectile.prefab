@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   _velocity: 10
+  _lifetime: 4
 --- !u!114 &3997807391543345643
 MonoBehaviour:
   m_ObjectHideFlags: 0
