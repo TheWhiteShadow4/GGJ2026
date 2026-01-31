@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada26b21fce56b9428a7ae055282e4d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MaskComponent
-  _fire: 1
-  _water: 1
-  _air: 1
-  _earth: 1
+  _fireResistance: 1
+  _waterResistance: 1
+  _airResistance: 1
+  _earthResistance: 1

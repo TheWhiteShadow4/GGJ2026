@@ -7,8 +7,6 @@ public class PlayerController : MonoBehaviour
 {
 	public static PlayerController Current;
 
-	public IceCannon iceCannon;
-
 	public float moveSpeed = 5f;
 
 	private PlayerInputController playerInputController = new PlayerInputController();

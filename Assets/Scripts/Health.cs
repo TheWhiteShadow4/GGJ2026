@@ -7,7 +7,7 @@ public class Health : MonoBehaviour, IHealth
     [SerializeField] float _maxHp;
     [SerializeField] UnityEvent<ElementType, float> _hitEvent;
     [SerializeField] UnityEvent _deathEvent;
-    IDamageResistance _resistance;
+    ICharacter _character;
 
     [SerializeField] LayerMask _incomingDamageLayers;
 
@@ -23,14 +23,14 @@ public class Health : MonoBehaviour, IHealth
 
     private void Awake()
     {
-        _resistance = transform.root.GetComponentInChildren<IDamageResistance>();
+        _character = transform.root.GetComponentInChildren<ICharacter>();
     }
 
     public void DoDamage(IDamageSource damage)
     {
         if (!enabled) return;
 
-        var dmg = damage.Damage * _resistance.GetMultiplier(damage.Type);
+        var dmg = damage.Damage / _character.Resistance.GetMultiplier(damage.Type);
         _hp -= dmg;
 
         _hitEvent?.Invoke(damage.Type, dmg);

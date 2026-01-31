@@ -10,10 +10,26 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 438141643102147234, guid: 8b068c0abbc2b2045889fbdfc5bdcacd, type: 3}
       propertyPath: _air
-      value: 2
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 438141643102147234, guid: 8b068c0abbc2b2045889fbdfc5bdcacd, type: 3}
+      propertyPath: _earth
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 438141643102147234, guid: 8b068c0abbc2b2045889fbdfc5bdcacd, type: 3}
       propertyPath: _water
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 438141643102147234, guid: 8b068c0abbc2b2045889fbdfc5bdcacd, type: 3}
+      propertyPath: _airResistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 438141643102147234, guid: 8b068c0abbc2b2045889fbdfc5bdcacd, type: 3}
+      propertyPath: _earthResistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 438141643102147234, guid: 8b068c0abbc2b2045889fbdfc5bdcacd, type: 3}
+      propertyPath: _waterResistance
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2550846612385712679, guid: 8b068c0abbc2b2045889fbdfc5bdcacd, type: 3}

@@ -191,10 +191,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada26b21fce56b9428a7ae055282e4d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MaskComponent
-  _fire: 0.5
-  _water: 2
-  _air: 1
-  _earth: 1
+  _fireResistance: 10
+  _waterResistance: 0.5
+  _airResistance: 2
+  _earthResistance: 1
 --- !u!114 &5054695887280726382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,10 +481,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada26b21fce56b9428a7ae055282e4d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MaskComponent
-  _fire: 2
-  _water: 0.5
-  _air: 1
-  _earth: 1
+  _fireResistance: 2
+  _waterResistance: 10
+  _airResistance: 1
+  _earthResistance: 0.5
 --- !u!114 &185403738691004691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,7 +663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa9158aa895f2049a2976aadae2ba77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  iceCannon: {fileID: 0}
   moveSpeed: 4
 --- !u!114 &-7053522559661250255
 MonoBehaviour:
