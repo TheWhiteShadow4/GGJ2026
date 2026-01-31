@@ -191,10 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada26b21fce56b9428a7ae055282e4d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MaskComponent
-  _fireResistance: 10
-  _waterResistance: 0.5
-  _airResistance: 2
-  _earthResistance: 1
+  _resistances: {fileID: 11400000, guid: 7e031b2aa52e2634596540a8bbc1be90, type: 2}
 --- !u!114 &5054695887280726382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,10 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada26b21fce56b9428a7ae055282e4d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MaskComponent
-  _fireResistance: 2
-  _waterResistance: 10
-  _airResistance: 1
-  _earthResistance: 0.5
+  _resistances: {fileID: 11400000, guid: 27b46bc790a8e0e4fbe7d79c9e40f4be, type: 2}
 --- !u!114 &185403738691004691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,6 +622,8 @@ Transform:
   - {fileID: 7867100499401647575}
   - {fileID: 1868008693375113507}
   - {fileID: 7832079842241811726}
+  - {fileID: 4563187598205270372}
+  - {fileID: 5221514940023108171}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &3898589451267942484
@@ -822,6 +818,67 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &6430561360025505577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4563187598205270372}
+  - component: {fileID: 3206155319949089511}
+  - component: {fileID: 7975239033749179405}
+  m_Layer: 8
+  m_Name: AirMask_TODO
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4563187598205270372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6430561360025505577}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2719692085670332513}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3206155319949089511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6430561360025505577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2024fd938806d409a850adbc56e0d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMask
+  maskComponent: {fileID: 7975239033749179405}
+  playerWeapon: {fileID: 0}
+  headAngle: 0
+--- !u!114 &7975239033749179405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6430561360025505577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ada26b21fce56b9428a7ae055282e4d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaskComponent
+  _resistances: {fileID: 11400000, guid: 2ca288e8fced8ac4f9814c67d52a3224, type: 2}
 --- !u!1 &6535315559401757908
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,6 +996,67 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &6755317359058436202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5221514940023108171}
+  - component: {fileID: 2149484541783649040}
+  - component: {fileID: 139043488910483201}
+  m_Layer: 8
+  m_Name: EarthMask_TODO
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5221514940023108171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755317359058436202}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2719692085670332513}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2149484541783649040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755317359058436202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2024fd938806d409a850adbc56e0d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMask
+  maskComponent: {fileID: 139043488910483201}
+  playerWeapon: {fileID: 0}
+  headAngle: 0
+--- !u!114 &139043488910483201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755317359058436202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ada26b21fce56b9428a7ae055282e4d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaskComponent
+  _resistances: {fileID: 11400000, guid: 05b7adf4671981f4caeae8016afbfca6, type: 2}
 --- !u!1 &8706665536107627866
 GameObject:
   m_ObjectHideFlags: 0

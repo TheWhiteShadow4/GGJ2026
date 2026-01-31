@@ -9,9 +9,6 @@ public class Enemy : MonoBehaviour, IEnemy
     /// <inheritdoc cref="IPlayer.Health"/>
     public IHealth Health => _health;
 
-    /// <inheritdoc cref="IPlayer.Element"/>
-    public ElementType Element => _element;
-
     /// <inheritdoc cref="IPlayer.Resistance"/>
     public IDamageResistance Resistance { get; private set; }
 
@@ -97,7 +94,7 @@ public class Enemy : MonoBehaviour, IEnemy
     /// <param name="damage">Damage type.</param>
     public void GotHit(ElementType type, float damage) 
     {
-        Debug.Log($"Got {damage} {type} damage. {Health.Hp} HP left.");
+        Debug.Log($"{type.GetEfficience(Resistance.Element)}! - Enemy got {damage} {type} damage. {Health.Hp} HP left.");
     }
 
     private void OnDrawGizmos()

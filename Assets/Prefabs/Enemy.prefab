@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 677079552517441597}
   - component: {fileID: 6767464596930349208}
   - component: {fileID: -4898506157269805961}
+  - component: {fileID: 438141643102147234}
   - component: {fileID: 6217768656269497387}
   - component: {fileID: 5326687662836192952}
   - component: {fileID: 2897204694311594794}
-  - component: {fileID: 438141643102147234}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
@@ -109,9 +109,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   _element: 0
+  _drawGizmos: 0
   _aggressionRange: 20
   _speed: 0.01
   _fireRate: 1
+--- !u!114 &438141643102147234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2550846612385712679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ada26b21fce56b9428a7ae055282e4d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaskComponent
+  _resistances: {fileID: 11400000, guid: 882680307db0ec14f99a20b7edc8e276, type: 2}
 --- !u!114 &6217768656269497387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,22 +197,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &438141643102147234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2550846612385712679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ada26b21fce56b9428a7ae055282e4d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MaskComponent
-  _fireResistance: 1
-  _waterResistance: 1
-  _airResistance: 1
-  _earthResistance: 1
 --- !u!1 &8452275234316761518
 GameObject:
   m_ObjectHideFlags: 0

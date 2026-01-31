@@ -1,5 +1,7 @@
 public interface IDamageResistance
 {
+    ElementType Element { get; }
+
     /// <summary>
     /// Get the resistance of the incoming type.
     /// </summary>
