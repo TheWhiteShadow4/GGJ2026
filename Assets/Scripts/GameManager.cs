@@ -1,6 +1,7 @@
 using UnityEngine;
 using TWS.Events;
 
+[DefaultExecutionOrder(-100)]
 public class GameManager : MonoBehaviour
 {
 	public static readonly string SAVE_GAME_KEY = "SaveGame";
