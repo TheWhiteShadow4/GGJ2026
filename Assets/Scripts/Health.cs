@@ -22,6 +22,7 @@ public class Health : MonoBehaviour, IHealth
 
     public void DoDamage(IDamageSource damage)
     {
+		if (!enabled) return;
         var dmg = damage.Damage * _resistance.GetMultiplier(damage.Type);
         _hp -= dmg;
 
