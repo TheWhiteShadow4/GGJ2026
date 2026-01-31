@@ -9,11 +9,17 @@ public class Health : MonoBehaviour, IHealth
     [SerializeField] UnityEvent _deathEvent;
     IDamageResistance _resistance;
 
+    [SerializeField] LayerMask _incomingDamageLayers;
+
     /// <inheritdoc cref="IHealth.MaxHp"/>
     public float MaxHp => _maxHp;
 
     /// <inheritdoc cref="IHealth.Hp"/>
     public float Hp => _hp;
+
+    public UnityEvent<ElementType, float> HitEvent => _hitEvent;
+
+    public UnityEvent DeathEvent => _deathEvent;
 
     private void Awake()
     {
@@ -22,7 +28,8 @@ public class Health : MonoBehaviour, IHealth
 
     public void DoDamage(IDamageSource damage)
     {
-		if (!enabled) return;
+        if (!enabled) return;
+
         var dmg = damage.Damage * _resistance.GetMultiplier(damage.Type);
         _hp -= dmg;
 
@@ -35,7 +42,7 @@ public class Health : MonoBehaviour, IHealth
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("DamageSource"))
+        if ((_incomingDamageLayers & (1 << other.gameObject.layer)) != 0)
         {
             var damageSource = other.transform.root.GetComponentInChildren<IDamageSource>();
             DoDamage(damageSource);
