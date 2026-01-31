@@ -1,7 +1,7 @@
 using UnityEngine;
 using TWS.Utils;
 
-public class IceCannon : MonoBehaviour
+public class IceCannon : PlayerWeapon
 {
 	public Projectile projectilePrefab;
 
@@ -22,7 +22,7 @@ public class IceCannon : MonoBehaviour
 		if (cooldown > 0) cooldown -= Time.deltaTime;
 	}
 
-	public void Fire()
+	public override void Fire()
 	{
 		if (cooldown > 0) return;
 		cooldown = interval;

@@ -13,11 +13,11 @@ TagManager:
   - 
   - Water
   - UI
-  - DamageSource
+  - Interactable
   - Enemy
   - Player
-  - 
-  - 
+  - EnemyWeapon
+  - PlayerWeapon
   - 
   - 
   - 

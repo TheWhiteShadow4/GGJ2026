@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5326687662836192952}
   - component: {fileID: 2897204694311594794}
   - component: {fileID: 438141643102147234}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
       m_Calls: []
   _incomingDamageLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 1024
 --- !u!65 &5326687662836192952
 BoxCollider:
   m_ObjectHideFlags: 0

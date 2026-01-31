@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4423169313019865994}
   - component: {fileID: 1943990189047550908}
   - component: {fileID: 6215908269842538394}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Cube
   m_TagString: DamageSource
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 3163842837332896230}
   - component: {fileID: 3997807391543345643}
   - component: {fileID: 6866473928580031773}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

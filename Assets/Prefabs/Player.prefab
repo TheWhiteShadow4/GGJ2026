@@ -15,9 +15,8 @@ GameObject:
   - component: {fileID: 5687358644221298674}
   - component: {fileID: -7053522559661250255}
   - component: {fileID: 8877116226689860403}
-  - component: {fileID: 953396468871983821}
   - component: {fileID: 9190527134737312802}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -129,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa9158aa895f2049a2976aadae2ba77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  iceCannon: {fileID: 0}
   moveSpeed: 4
 --- !u!114 &-7053522559661250255
 MonoBehaviour:
@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652ff8077158bae4487c9f79c32f4400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  _playerMasks: []
 --- !u!114 &8877116226689860403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,23 +165,7 @@ MonoBehaviour:
       m_Calls: []
   _incomingDamageLayers:
     serializedVersion: 2
-    m_Bits: 64
---- !u!114 &953396468871983821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5950169926618016518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ada26b21fce56b9428a7ae055282e4d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MaskComponent
-  _fire: 1
-  _water: 1
-  _air: 1
-  _earth: 1
+    m_Bits: 640
 --- !u!54 &9190527134737312802
 Rigidbody:
   m_ObjectHideFlags: 0

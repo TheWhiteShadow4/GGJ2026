@@ -37,6 +37,11 @@ public class Projectile : MonoBehaviour, IProjectile
         DestroySelf();
     }
 
+	private void OnCollisionEnter(Collision collision)
+	{
+		DestroySelf();
+	}
+
 	void DestroySelf()
 	{
 		lifetimer = 0;

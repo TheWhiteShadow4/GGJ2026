@@ -2,6 +2,7 @@ using UnityEngine;
 using TWS.Events;
 using UnityEngine.InputSystem;
 
+[DefaultExecutionOrder(-1)]
 public class PlayerController : MonoBehaviour
 {
 	public static PlayerController Current;
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
 	private bool isAttacking = false;
 
+	private PlayerCharacter playerCharacter;
+
 	void Awake()
 	{
 		if (Current != null)
@@ -21,6 +24,7 @@ public class PlayerController : MonoBehaviour
 			Destroy(Current.gameObject);
 		}
 		Current = this;
+		playerCharacter = GetComponent<PlayerCharacter>();
 
         if (GameManager.Instance.wasLoaded)
         {
@@ -38,6 +42,7 @@ public class PlayerController : MonoBehaviour
 		controls.Player.Block.performed += OnBlock;
 		controls.Player.Interact.performed += OnInteract;
 		controls.Player.Dash.performed += OnDash;
+		playerInputController.OnChangeWeapon += OnChangeMask;
 	}
 
 	void OnDisable()
@@ -59,13 +64,19 @@ public class PlayerController : MonoBehaviour
 
 		if (isAttacking)
 		{
-			iceCannon.Fire();
+			playerCharacter.Fire();
 		}
+	}
+
+	private void OnChangeMask(int index)
+	{
+		playerCharacter.OnChangeMask(index);
 	}
 
 	private void OnAttack(InputAction.CallbackContext context)
 	{
 		isAttacking = context.ReadValueAsButton();
+		if (!isAttacking) playerCharacter.Stop();
 	}
 
 	private void OnBlock(InputAction.CallbackContext context)

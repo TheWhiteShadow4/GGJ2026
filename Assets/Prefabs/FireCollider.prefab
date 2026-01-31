@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7632671837353802621}
   - component: {fileID: 8197616880601186562}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3549060086188778708}
   - component: {fileID: 3426773316484981428}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,9 +116,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7451427416324473164}
   - component: {fileID: 7245328971569346379}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FireCollider
-  m_TagString: Untagged
+  m_TagString: DamageSource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,7 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6544992696745852802}
   - component: {fileID: 415030256251791408}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -44,8 +44,10 @@ public class Health : MonoBehaviour, IHealth
     {
         if ((_incomingDamageLayers & (1 << other.gameObject.layer)) != 0)
         {
-            var damageSource = other.transform.root.GetComponentInChildren<IDamageSource>();
-            DoDamage(damageSource);
+			if (other.TryGetComponent<IDamageSource>(out var damageSource))
+			{
+				DoDamage(damageSource);
+			}
         }
     }
 }
