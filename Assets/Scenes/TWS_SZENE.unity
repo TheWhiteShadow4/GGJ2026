@@ -739,17 +739,17 @@ LineRenderer:
   m_MaskInteraction: 0
   m_Positions:
   - {x: 0.5, y: 0.656, z: 0}
-  - {x: 0.7575609, y: 0.45922196, z: -0.03575456}
-  - {x: 1.1889551, y: 0.63478, z: 0.096381135}
-  - {x: 1.1541638, y: 0.5947128, z: 0.1491322}
-  - {x: 1.3741568, y: 0.53330356, z: -0.025660872}
-  - {x: 1.6506357, y: 0.71502143, z: -0.1333592}
-  - {x: 1.934335, y: 0.50230646, z: -0.06427701}
-  - {x: 2.207027, y: 0.5578977, z: 0.14581119}
-  - {x: 2.4740353, y: 0.49302012, z: -0.077766396}
-  - {x: 2.6233222, y: 0.61912286, z: 0.030579686}
-  - {x: 3.0629296, y: 0.54944664, z: 0.16882148}
-  - {x: 3.2274725, y: 0.71833307, z: -0.1583787}
+  - {x: 0.7894815, y: 0.67178416, z: -0.19679442}
+  - {x: 0.8206892, y: 0.679275, z: -0.041250445}
+  - {x: 1.075327, y: 0.6858326, z: 0.015258527}
+  - {x: 1.6232135, y: 0.6418662, z: 0.1763844}
+  - {x: 1.9279871, y: 0.7414783, z: -0.113827944}
+  - {x: 2.169787, y: 0.55586654, z: 0.120006375}
+  - {x: 2.19794, y: 0.65061826, z: 0.1704063}
+  - {x: 2.6057007, y: 0.8461642, z: 0.041821074}
+  - {x: 2.859752, y: 0.4937634, z: -0.10905981}
+  - {x: 3.2131546, y: 0.51144856, z: 0.0042622807}
+  - {x: 3.253057, y: 0.63374424, z: 0.18219085}
   - {x: 3.59, y: 0.656, z: 0}
   m_Parameters:
     serializedVersion: 3
@@ -1255,17 +1255,17 @@ LineRenderer:
   m_MaskInteraction: 0
   m_Positions:
   - {x: 4.64, y: 0.656, z: 2.03}
-  - {x: 4.89752, y: 0.4855038, z: 2.01112}
-  - {x: 4.8125505, y: 0.5960164, z: 1.8503147}
-  - {x: 5.280768, y: 0.57171065, z: 1.6034745}
-  - {x: 5.497019, y: 0.55663484, z: 1.7812737}
-  - {x: 5.708223, y: 0.76411825, z: 1.6282331}
-  - {x: 5.7463217, y: 0.46953243, z: 1.4145484}
-  - {x: 5.870036, y: 0.59359, z: 1.5795633}
-  - {x: 6.04037, y: 0.78667575, z: 1.1614928}
-  - {x: 6.4047847, y: 0.73268104, z: 1.0810622}
-  - {x: 6.41373, y: 0.5300688, z: 1.2709911}
-  - {x: 6.563566, y: 0.81726635, z: 1.1225016}
+  - {x: 4.831123, y: 0.75420547, z: 2.1131387}
+  - {x: 5.116323, y: 0.4962434, z: 1.806968}
+  - {x: 5.2315035, y: 0.8423708, z: 1.8132076}
+  - {x: 5.374791, y: 0.49123466, z: 1.7797434}
+  - {x: 5.418632, y: 0.5714449, z: 1.7024353}
+  - {x: 5.7252073, y: 0.8146199, z: 1.606724}
+  - {x: 5.8247204, y: 0.6795898, z: 1.5727273}
+  - {x: 6.104886, y: 0.8524735, z: 1.2677706}
+  - {x: 6.274858, y: 0.74310565, z: 1.392535}
+  - {x: 6.3952746, y: 0.83361083, z: 1.1901169}
+  - {x: 6.6285667, y: 0.7397651, z: 0.84948266}
   - {x: 6.8199997, y: 0.656, z: 0.93999994}
   m_Parameters:
     serializedVersion: 3
@@ -1773,17 +1773,17 @@ LineRenderer:
   m_MaskInteraction: 0
   m_Positions:
   - {x: 3.65, y: 0.656, z: -0.27}
-  - {x: 3.5809698, y: 0.53649193, z: -0.10816834}
-  - {x: 4.0107217, y: 0.5894039, z: 0.14889477}
-  - {x: 3.9285212, y: 0.48236847, z: 0.17860872}
-  - {x: 3.835793, y: 0.5624395, z: 0.48997137}
-  - {x: 4.070084, y: 0.69052684, z: 0.44778746}
-  - {x: 4.114082, y: 0.49141955, z: 0.74044424}
-  - {x: 4.298184, y: 0.4671464, z: 1.0707746}
-  - {x: 4.552481, y: 0.64115727, z: 1.1095002}
-  - {x: 4.6299014, y: 0.60617614, z: 1.4655114}
-  - {x: 4.516743, y: 0.6214232, z: 1.3608392}
-  - {x: 4.519623, y: 0.7369811, z: 1.8751644}
+  - {x: 3.6355424, y: 0.5579843, z: -0.22707629}
+  - {x: 3.6951222, y: 0.62112886, z: -0.04849884}
+  - {x: 3.7258778, y: 0.6391346, z: 0.23242117}
+  - {x: 3.9053257, y: 0.76243246, z: 0.32690096}
+  - {x: 3.9302092, y: 0.7471057, z: 0.5889198}
+  - {x: 4.348326, y: 0.64560187, z: 0.9467567}
+  - {x: 4.4106293, y: 0.80517274, z: 0.98135483}
+  - {x: 4.3370767, y: 0.7803362, z: 1.3431554}
+  - {x: 4.2953467, y: 0.6378824, z: 1.2604239}
+  - {x: 4.634165, y: 0.55092674, z: 1.407095}
+  - {x: 4.799776, y: 0.7741607, z: 1.7600733}
   - {x: 4.73, y: 0.656, z: 1.9200001}
   m_Parameters:
     serializedVersion: 3
@@ -1859,6 +1859,53 @@ Transform:
   - {fileID: 87823509}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1659029260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1659029261}
+  - component: {fileID: 1659029262}
+  m_Layer: 0
+  m_Name: Eismaschiene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1659029261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659029260}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5928241915353089113}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1659029262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659029260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a95ad8a04e5f64ea2b1161e885d553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IceCannon
+  projectilePrefab: {fileID: 5049666439973268634, guid: dd6358e4ef003dd4f80a58ffff6b3683, type: 3}
+  interval: 0.02
+  dispersion: 1
 --- !u!1 &1881592748
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,6 +2198,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5687358644221298674, guid: 271b4405809f94b448bb6d308cb21927, type: 3}
+      propertyPath: iceCannon
+      value: 
+      objectReference: {fileID: 1659029262}
     - target: {fileID: 5950169926618016518, guid: 271b4405809f94b448bb6d308cb21927, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2177,6 +2228,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2719692085670332513, guid: 271b4405809f94b448bb6d308cb21927, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1881592749}
+    - targetCorrespondingSourceObject: {fileID: 2719692085670332513, guid: 271b4405809f94b448bb6d308cb21927, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1659029261}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 271b4405809f94b448bb6d308cb21927, type: 3}
 --- !u!4 &5928241915353089113 stripped
