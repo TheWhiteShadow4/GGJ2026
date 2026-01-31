@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
 
 public class Enemy : MonoBehaviour, IEnemy
 {
@@ -8,11 +7,11 @@ public class Enemy : MonoBehaviour, IEnemy
     /// <inheritdoc cref="IPlayer.Health"/>
     public IHealth Health { get; private set; }
 
-    /// <inheritdoc cref="IPlayer.DamageSource"/>
-    public IDamageSource DamageSource { get; private set; }
-
     /// <inheritdoc cref="IPlayer.Element"/>
     public ElementType Element => _element;
+
+    /// <inheritdoc cref="IPlayer.Resistance"/>
+    public IDamageResistance Resistance { get; private set; }
 
     [SerializeField] float _aggressionRange = 20f;
     [SerializeField] float _speed = 0.01f;
@@ -24,7 +23,7 @@ public class Enemy : MonoBehaviour, IEnemy
     private void Awake()
     {
         Health = GetComponentInChildren<IHealth>();
-        DamageSource = GetComponentInChildren<IDamageSource>();
+        Resistance = GetComponentInChildren<IDamageResistance>();
         _player = (PlayerCharacter)GameObject.FindFirstObjectByType(typeof(PlayerCharacter));
     }
 
@@ -57,9 +56,10 @@ public class Enemy : MonoBehaviour, IEnemy
     /// <summary>
     /// Called bia UnityEvent.
     /// </summary>
-    /// <param name="damage">Damage source.</param>
-    public void GotHit(IDamageSource damage) 
+    /// <param name="type">ElementType type.</param>
+    /// <param name="damage">Damage type.</param>
+    public void GotHit(ElementType type, float damage) 
     {
-        Debug.Log($"Got {damage} damage. {Health.Hp} HP left.");
+        Debug.Log($"Got {damage} {type} damage. {Health.Hp} HP left.");
     }
 }
