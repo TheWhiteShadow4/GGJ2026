@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PressingPlate : MonoBehaviour
 {
+    [SerializeField] bool _autoMove = true;
+
     public Vector3 moveDirection = Vector3.forward;
     public float moveDistance = 2f;
     public float speed = 2f;
@@ -15,7 +17,11 @@ public class PressingPlate : MonoBehaviour
     {
         startPos = transform.position;
         targetPos = startPos + moveDirection.normalized * moveDistance;
-        StartCoroutine(MovePlate());
+
+        if (_autoMove)
+        {
+            StartCoroutine(MovePlate());
+        }
     }
 
     System.Collections.IEnumerator MovePlate()
@@ -34,37 +40,18 @@ public class PressingPlate : MonoBehaviour
                 yield return null;
             }
 
+            if (!_autoMove) break;
+
             yield return new WaitForSeconds(waitTime);
             movingForward = !movingForward;
         }
     }
 
-    //[SerializeField] Vector3 _position1;
-    //[SerializeField] Vector3 _position2;
-    //[SerializeField] float _velocity;
+    public void OnSwitchToggled(bool on) 
+    {
+        if (_autoMove) return;
 
-    //bool forward;
-
-    //private void Awake()
-    //{
-    //    InvokeRepeating(nameof(SwitchDirections), 1f, 3f);
-    //}
-
-    //private void Update()
-    //{
-    //    if (forward)
-    //    {
-    //        if (_position1)
-    //        transform.position += forward ? Vector3.forward : Vector3.back * Time.deltaTime * _velocity;
-    //    }
-    //    else
-    //    {
-    //        transform.position += forward ? Vector3.forward : Vector3.back * Time.deltaTime * _velocity;
-    //    }
-    //}
-
-    //void SwitchDirections() 
-    //{
-    //    forward = !forward;
-    //}
+        movingForward = on;
+        StartCoroutine(MovePlate());
+    }
 }
