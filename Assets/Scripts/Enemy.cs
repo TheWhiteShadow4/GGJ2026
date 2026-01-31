@@ -64,7 +64,13 @@ public class Enemy : MonoBehaviour, IEnemy
         if (_aggro)
         {
             //TODO add more dynamic pathfinding in case we use more complex level with walls and obstacles
+
             float pivotAngle = Vector3.SignedAngle(-1 * Vector3.forward, playerDir, Vector3.up);
+            if (pivotAngle > 90)
+                pivotAngle = (180.0f - pivotAngle);
+            else if (pivotAngle < -90)
+                pivotAngle = (-180.0f - pivotAngle);
+
             pivotAngle = Mathf.Clamp(pivotAngle, -1 * _pivotAngle, _pivotAngle);
             Vector3 lookDirection = Quaternion.AngleAxis(pivotAngle, Vector3.up) * (- 1.0f * Vector3.forward);
             transform.rotation = Quaternion.LookRotation(lookDirection);
