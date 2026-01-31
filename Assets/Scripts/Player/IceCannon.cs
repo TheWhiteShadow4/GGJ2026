@@ -31,7 +31,7 @@ public class IceCannon : PlayerWeapon
 		
 		for (int i = 0; i < projectileCount; i++)
 		{
-			float angle = Mathf.Lerp(-spread / 2, spread / 2, (float)i / (projectileCount - 1));
+			float angle = Mathf.Lerp(-spread / 2, spread / 2, (float)i / projectileCount);
 			angle += Random.Range(-dispersion, dispersion);
 			Quaternion rotation = transform.rotation * Quaternion.Euler(0, angle, 0);
 			Projectile projectile = pool.GetInstance<Projectile>();
