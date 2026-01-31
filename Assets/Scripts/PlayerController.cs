@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
 	private PlayerCharacter playerCharacter;
 
+	private Vector3 impactForce = Vector3.zero;
+
 	void Awake()
 	{
 		if (Current != null)
@@ -58,12 +60,22 @@ public class PlayerController : MonoBehaviour
 	{
 		Vector3 velocity = new Vector3(playerInputController.moveDirection.x, 0, playerInputController.moveDirection.y) * moveSpeed;
 		Vector3 movement = velocity * Time.deltaTime;
+		if(impactForce.magnitude > 0.2f)
+		{
+			movement += impactForce * Time.deltaTime;
+		}
+		impactForce = Vector3.Lerp(impactForce, Vector3.zero, 5 * Time.deltaTime);
 		transform.Translate(movement, Space.World);
 
 		if (isAttacking)
 		{
 			playerCharacter.Fire();
 		}
+	}
+
+	public void ApplyImpactForce(Vector3 force)
+	{
+		impactForce += force;
 	}
 
 	private void OnChangeMask(int index)

@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour, IEnemy
 {
-    [SerializeField] ElementType _element;
     Health _health;
+    [SerializeField] float _knockbackResistance;
     ShootComponent _shootComponent;
 
     /// <inheritdoc cref="IPlayer.Health"/>
@@ -12,6 +12,9 @@ public class Enemy : MonoBehaviour, IEnemy
     /// <inheritdoc cref="IPlayer.Resistance"/>
     public IDamageResistance Resistance { get; private set; }
 
+    /// <inheritdoc cref="IKnockbackTarget.KnockbackResistance"/>
+    public float KnockbackResistance => _knockbackResistance;
+
     [SerializeField] bool _drawGizmos = false;
     [SerializeField] float _aggressionRange = 20f;
     [SerializeField] float _speed = 1f;
@@ -19,6 +22,7 @@ public class Enemy : MonoBehaviour, IEnemy
 
     private bool _aggro = false;
     private PlayerCharacter _player;
+    private Vector3 impactForce = Vector3.zero;
 
     public bool HasShootComponent => _shootComponent != null;
 
@@ -41,6 +45,15 @@ public class Enemy : MonoBehaviour, IEnemy
     {
         var playerDir = _player.gameObject.transform.position - gameObject.transform.position;
 
+        Vector3 impactMovement = Vector3.zero;
+        Vector3 movement = Vector3.zero;
+
+        if (impactForce.magnitude > 0.2f)
+        {
+            impactMovement = impactForce * Time.deltaTime;
+        }
+        impactForce = Vector3.Lerp(impactForce, Vector3.zero, 5 * Time.deltaTime);
+
         if (_aggro)
         {
             //TODO add more dynamic pathfinding in case we use more complex level with walls and obstacles
@@ -51,13 +64,13 @@ public class Enemy : MonoBehaviour, IEnemy
                 // come closer
                 if (playerDir.magnitude < _aggressionRange)
                 {
-                    transform.position += playerDir.normalized * _speed * Time.deltaTime;
+                    movement = playerDir.normalized * _speed * Time.deltaTime;
                 }
             }
             else
             {
                 // try to deathly touch the player
-                transform.position += playerDir.normalized * _speed * Time.deltaTime;
+                movement = playerDir.normalized * _speed * Time.deltaTime;
             }
         }
         else
@@ -67,6 +80,15 @@ public class Enemy : MonoBehaviour, IEnemy
                 _aggro = true;
             }
         }
+
+        transform.position += movement + impactMovement;
+    }
+
+    public void ApplyKnockback(Vector3 direction, float strength)
+    {
+        Vector3 knockbackForce = direction * strength * (1 - _knockbackResistance);
+
+        impactForce += knockbackForce;
     }
 
     private void ShootAtThePlayer() 
