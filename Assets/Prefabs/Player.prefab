@@ -665,8 +665,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IceCannon
   projectilePrefab: {fileID: 5049666439973268634, guid: dd6358e4ef003dd4f80a58ffff6b3683, type: 3}
-  interval: 0.05
-  dispersion: 10
+  interval: 0.5
+  dispersion: 5
   spread: 60
   projectileCount: 12
 --- !u!1 &4488419626414024801
@@ -1127,6 +1127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageComponent
   _type: 3
   _damage: 3
+  _appliesKnockback: 0
+  _knockbackStrength: 0
 --- !u!1 &6457354515100371291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1947,6 +1949,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageComponent
   _type: 1
   _damage: 2
+  _appliesKnockback: 0
+  _knockbackStrength: 0
 --- !u!1 &5758349958397606319 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5413686633849836102, guid: bfacccc25125a3341baac0eeea7ea0ef, type: 3}
@@ -1966,6 +1970,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageComponent
   _type: 1
   _damage: 2
+  _appliesKnockback: 0
+  _knockbackStrength: 0
 --- !u!1 &6717802417427902523 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6481504757474532306, guid: bfacccc25125a3341baac0eeea7ea0ef, type: 3}
@@ -1985,6 +1991,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageComponent
   _type: 1
   _damage: 2
+  _appliesKnockback: 0
+  _knockbackStrength: 0
 --- !u!114 &6936695472249003170 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7245328971569346379, guid: bfacccc25125a3341baac0eeea7ea0ef, type: 3}
