@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
 	public float moveSpeed = 5f;
 
-	private PlayerInputController playerInputController = new PlayerInputController();
+	[HideInInspector] public PlayerInputController playerInputController = new PlayerInputController();
 
 	private bool isAttacking = false;
 

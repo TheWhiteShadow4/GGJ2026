@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputController
 {
-
 	public Vector2 moveDirection;
+	[HideInInspector] public Vector3 mouseTarget;
 	private Vector2 lookDirection;
 	private Camera camera;
 
@@ -55,9 +55,9 @@ public class PlayerInputController
 		Ray ray = camera.ScreenPointToRay(mousePosition);
 		if (plane.Raycast(ray, out float distance))
 		{
-			Vector3 worldPoint = ray.GetPoint(distance);
-			worldPoint.y = PlayerController.Current.transform.position.y;
-			PlayerController.Current.transform.LookAt(worldPoint);
+			mouseTarget = ray.GetPoint(distance);
+			mouseTarget.y = PlayerController.Current.transform.position.y;
+			PlayerController.Current.transform.LookAt(mouseTarget);
 		}
 	}
 

@@ -46,17 +46,12 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
     public void GotHit(ElementType type, float damage)
     {
         Debug.Log($"Got {damage} {type} damage. {Health.Hp} HP left.");
-
-        ApplyKnockback(new Vector3(1, 0, 0), 10);
-
-        //_knockbackTarget.ApplyKnockback(new Vector3(1, 0, 0), 100);
     }
 
     public void ApplyKnockback(Vector3 direction, float strength)
     {
         Vector3 knockbackForce = direction * strength * (1 - _knockbackResistance);
-
-        //gameObject.transform.root.GetComponentInChildren<PlayerController>().ApplyImpactForce(knockbackForce);
+        gameObject.transform.root.GetComponentInChildren<PlayerController>().ApplyImpactForce(knockbackForce);
     }
 
 	public void OnChangeMask(int index)
