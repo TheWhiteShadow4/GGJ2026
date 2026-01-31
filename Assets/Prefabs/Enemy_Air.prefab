@@ -36,6 +36,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Air
       objectReference: {fileID: 0}
+    - target: {fileID: 3579959601141061258, guid: 8b068c0abbc2b2045889fbdfc5bdcacd, type: 3}
+      propertyPath: _type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579959601141061258, guid: 8b068c0abbc2b2045889fbdfc5bdcacd, type: 3}
+      propertyPath: _damage
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6512333831167073196, guid: 8b068c0abbc2b2045889fbdfc5bdcacd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

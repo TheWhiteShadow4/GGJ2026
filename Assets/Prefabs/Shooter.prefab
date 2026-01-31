@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShootComponent
   _projectile: {fileID: 9119182535081151946, guid: 0a1371f3d4f2c4440914f63974783ae9, type: 3}
-  _gun: {fileID: 7084515206743401055}
+  _aim: {fileID: 7084515206743401055}
 --- !u!1 &5507231976253037999
 GameObject:
   m_ObjectHideFlags: 0

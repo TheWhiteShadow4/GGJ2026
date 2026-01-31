@@ -1,5 +1,4 @@
 using UnityEngine;
-using TWS.Utils;
 
 public class Projectile : MonoBehaviour, IProjectile
 {

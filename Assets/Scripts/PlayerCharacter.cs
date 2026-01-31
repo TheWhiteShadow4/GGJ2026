@@ -28,7 +28,9 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
     public void Died()
     {
         Debug.Log("Player Died");
-        GameObject.Destroy(gameObject);
+        // Deatzh animation ?
+        gameObject.transform.root.GetComponentInChildren<PlayerController>().enabled = false;
+        // Go back to main menu
     }
 
     /// <summary>
@@ -43,7 +45,10 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
 
 	public void OnChangeMask(int index)
 	{
-		currentMaskIndex = index;
+        // Stop current mask - needed at least for the initial one
+        if (currentMaskIndex >= 0)
+            Stop();
+        currentMaskIndex = index;
 	}
 
 	public void Fire()
