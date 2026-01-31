@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcb2436db4e608f4882804a8266287fa, type: 3}
-  m_Name: AirElement
+  m_Name: WaterElementResistance
   m_EditorClassIdentifier: Assembly-CSharp::ElementTypesDefinition
-  _element: 3
-  _fireResistance: 0.5
-  _waterResistance: 15
-  _airResistance: 30
-  _earthResistance: 60
+  _element: 2
+  _fireResistance: 60
+  _waterResistance: 30
+  _airResistance: 15
+  _earthResistance: 0.5
