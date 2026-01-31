@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
 
 public class Enemy : MonoBehaviour, IEnemy
 {
@@ -7,9 +6,6 @@ public class Enemy : MonoBehaviour, IEnemy
 
     /// <inheritdoc cref="IPlayer.Health"/>
     public IHealth Health { get; private set; }
-
-    /// <inheritdoc cref="IPlayer.DamageSource"/>
-    public IDamageSource DamageSource { get; private set; }
 
     /// <inheritdoc cref="IPlayer.Element"/>
     public ElementType Element => _element;
@@ -24,7 +20,6 @@ public class Enemy : MonoBehaviour, IEnemy
     private void Awake()
     {
         Health = GetComponentInChildren<IHealth>();
-        DamageSource = GetComponentInChildren<IDamageSource>();
         _player = (PlayerCharacter)GameObject.FindFirstObjectByType(typeof(PlayerCharacter));
     }
 

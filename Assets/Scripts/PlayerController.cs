@@ -18,14 +18,14 @@ public class PlayerController : MonoBehaviour
 		}
 		Current = this;
 
-		if (GameManager.Instance.wasLoaded)
-		{
-			GameManager.Instance.wasLoaded = false;
-			GameProgress.Current.RestorePlayerPosition(transform);
-		}
-	}
+        if (GameManager.Instance.wasLoaded)
+        {
+            GameManager.Instance.wasLoaded = false;
+            GameProgress.Current.RestorePlayerPosition(transform);
+        }
+    }
 
-	void OnEnable()
+    void OnEnable()
 	{
 		var controls = GameManager.Instance.controls;
 		controls.Player.Enable();

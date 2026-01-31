@@ -16,14 +16,13 @@ public class Health : MonoBehaviour, IHealth
 
     public void DoDamage(IDamageSource damage)
     {
-        _hp += damage.Damage;
+        _hp -= damage.Damage;
 
         _hitEvent?.Invoke(damage);
         if (_hp <= 0)
         {
             _deathEvent?.Invoke();
         }
-        
     }
 
     private void OnTriggerEnter(Collider other)

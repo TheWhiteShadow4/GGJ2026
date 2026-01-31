@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 	public bool wasLoaded = false;
 	public Controls controls;
 
-	void Awake()
+    void Awake()
 	{
 		if (Instance != null)
 		{
