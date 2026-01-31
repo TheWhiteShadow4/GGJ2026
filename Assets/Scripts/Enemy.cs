@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour, IEnemy
 {
-    [SerializeField] ElementType _element;
     Health _health;
     [SerializeField] float _knockbackResistance;
     ShootComponent _shootComponent;
