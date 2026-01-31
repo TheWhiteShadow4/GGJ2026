@@ -2,15 +2,19 @@ using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour, IPlayer
 {
+    Health _health;
+
     /// <inheritdoc cref="IPlayer.Health"/>
-    public IHealth Health { get; private set; }
+    public IHealth Health => _health;
 
     /// <inheritdoc cref="IPlayer.Resistance"/>
     public IDamageResistance Resistance { get; private set; }
 
     private void Awake()
     {
-        Health = GetComponentInChildren<IHealth>();
+        _health = GetComponentInChildren<Health>();
+        _health.HitEvent.AddListener(GotHit);
+        _health.DeathEvent.AddListener(Died);
         Resistance = GetComponentInChildren<IDamageResistance>();
     }
 
