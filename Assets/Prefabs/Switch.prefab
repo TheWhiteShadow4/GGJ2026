@@ -52,6 +52,7 @@ MonoBehaviour:
       m_Calls: []
   _switchPivot: {fileID: 3118098142378644471}
   _rotationAxis: {x: 0, y: 0, z: 1}
+  _switchSound: {fileID: 8300000, guid: 0dd1d6cc5a2aa2e4c964dd2e91a0d39c, type: 3}
 --- !u!135 &3436199078160277973
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -299,3 +300,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51526739268e57046828f112097477de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VictoryArea
+  _victorySound: {fileID: 0}

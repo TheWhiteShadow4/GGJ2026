@@ -7,6 +7,7 @@ public class SwitchAre : MonoBehaviour
     [SerializeField] UnityEvent<bool> _onSwitchChanged;
     [SerializeField] Transform _switchPivot;
     [SerializeField] Vector3 _rotationAxis;
+	[SerializeField] AudioClip _switchSound;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,6 +16,10 @@ public class SwitchAre : MonoBehaviour
             _on = !_on;
             _switchPivot.Rotate(_rotationAxis, _on ? -45 : 45);
             _onSwitchChanged?.Invoke(_on);
+			if (_switchSound != null)
+			{
+				GameManager.Instance.PlaySound(_switchSound);
+			}
         }
     }
 }

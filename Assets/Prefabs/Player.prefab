@@ -1289,7 +1289,7 @@ MonoBehaviour:
   dispersion: 5
   spread: 60
   projectileCount: 12
-  fireSound: {fileID: 8300000, guid: f0f1c022de4876e4d97641c1969d5ca0, type: 3}
+  fireSound: {fileID: 8300000, guid: 7c8737aff0ea1cf4894202084c6ab331, type: 3}
 --- !u!1 &5950169926618016518
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,6 +1407,8 @@ MonoBehaviour:
   _deathEvent:
     m_PersistentCalls:
       m_Calls: []
+  _hitSound: {fileID: 8300000, guid: 61780baed4daec6409d44182c98b74b8, type: 3}
+  _deathSound: {fileID: 8300000, guid: e3854c93cf61fd746b766399d0e1a3f1, type: 3}
   _showDamageText: 1
   _damageText: {fileID: 3309647578305378082, guid: fa32e9a09b41deb4bb65d4be4044ca43, type: 3}
   _incomingDamageLayers:
@@ -1981,7 +1983,7 @@ MonoBehaviour:
   dispersion: 2
   spread: 0
   projectileCount: 1
-  fireSound: {fileID: 8300000, guid: f0f1c022de4876e4d97641c1969d5ca0, type: 3}
+  fireSound: {fileID: 8300000, guid: e4e6a3fb2988caf46854f6b86ef12b83, type: 3}
 --- !u!1 &7073263415752699843
 GameObject:
   m_ObjectHideFlags: 0
