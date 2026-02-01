@@ -148,7 +148,7 @@ public class LightningCannon : PlayerWeapon
 		blitze[idx].transform.position = origin;
 		blitze[idx].target.position = targetObject.hitPosition;
 
-		if (targetObject.collider != null && targetObject.collider.TryGetComponent(out IHealth health))
+		if (targetObject.collider != null && targetObject.collider.transform.parent.TryGetComponent(out IHealth health))
 		{
 			health.DoDamage(damageSource);
 		}
