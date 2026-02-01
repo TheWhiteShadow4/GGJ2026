@@ -44,6 +44,10 @@ PrefabInstance:
       propertyPath: _type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3579959601141061258, guid: 8b068c0abbc2b2045889fbdfc5bdcacd, type: 3}
+      propertyPath: _damageDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 23646dff5de682f4f94f0c65fd3ef89a, type: 2}
     - target: {fileID: 5326687662836192952, guid: 8b068c0abbc2b2045889fbdfc5bdcacd, type: 3}
       propertyPath: m_Size.y
       value: 1.3

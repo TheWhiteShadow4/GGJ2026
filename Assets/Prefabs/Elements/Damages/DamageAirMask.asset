@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcb2436db4e608f4882804a8266287fa, type: 3}
-  m_Name: AirElementResistance
-  m_EditorClassIdentifier: Assembly-CSharp::ElementTypesDefinition
+  m_Script: {fileID: 11500000, guid: 8b5affea37ef37e44a91541b4af7eebf, type: 3}
+  m_Name: DamageAirMask
+  m_EditorClassIdentifier: Assembly-CSharp::DamageDefinition
   _element: 3
-  _fireResistance: 20.6
-  _waterResistance: 2.8
-  _airResistance: 4.6
-  _earthResistance: 1.4
+  _damage: 3

@@ -194,8 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2249a29f29538f748a74a7b04f9884c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  _hp: 10
-  _maxHp: 10
+  _hp: 10000
+  _maxHp: 100
   _hitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -304,3 +304,4 @@ MonoBehaviour:
   _damage: 5
   _appliesKnockback: 1
   _knockbackStrength: 10
+  _damageDefinition: {fileID: 11400000, guid: 9802952ed034943418c7eb6171b817fc, type: 2}

@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: _element
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3304347368990103864, guid: 67641330ada34c24382e39f799102165, type: 3}
+      propertyPath: _damageDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 36f70faf35b9ccb4c85d26f054da6d66, type: 2}
     - target: {fileID: 3873368388799830953, guid: 67641330ada34c24382e39f799102165, type: 3}
       propertyPath: m_Sprite
       value: 

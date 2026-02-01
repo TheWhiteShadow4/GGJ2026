@@ -85,6 +85,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageComponent
   _type: 2
   _damage: 4
+  _appliesKnockback: 0
+  _knockbackStrength: 0
+  _damageDefinition: {fileID: 11400000, guid: 7a21b2978e430714d81056bc310cb5e1, type: 2}
 --- !u!54 &1466936369742036481
 Rigidbody:
   m_ObjectHideFlags: 0
