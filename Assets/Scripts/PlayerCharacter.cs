@@ -88,11 +88,15 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
 
 	public void Fire()
 	{
-		_playerMasks[currentMaskIndex].playerWeapon.Fire();
+		PlayerMask playerMask = _playerMasks[currentMaskIndex];
+		playerMask.playerWeapon.Fire();
+		playerMask.SetAnimationState(PlayerMask.MaskAnimationState.Shoot);
 	}
 
 	public void Stop()
 	{
+		PlayerMask playerMask = _playerMasks[currentMaskIndex];
+		playerMask.SetAnimationState(PlayerMask.MaskAnimationState.On);
 		_playerMasks[currentMaskIndex].playerWeapon.Stop();
 	}
 }

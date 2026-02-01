@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6240057272104912143}
   - component: {fileID: 4466376259191025866}
+  - component: {fileID: 7131711676267041122}
   m_Layer: 0
   m_Name: LuftMaske
   m_TagString: Untagged
@@ -91,6 +92,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &7131711676267041122
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717682341995410213}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6e05ed64540ead04084e1adf2ebedcb6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &828192406126548538
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,17 +199,17 @@ LineRenderer:
   m_MaskInteraction: 0
   m_Positions:
   - {x: 0.5, y: 0.656, z: 0}
-  - {x: 0.6216449, y: 0.77817816, z: -0.08133819}
-  - {x: 0.83685863, y: 0.71657467, z: 0.06779651}
-  - {x: 1.0914533, y: 0.73917985, z: -0.017413069}
-  - {x: 1.5421882, y: 0.8158961, z: -0.119518615}
-  - {x: 1.6327018, y: 0.5986003, z: -0.11288414}
-  - {x: 1.9245896, y: 0.6185882, z: 0.15524717}
-  - {x: 2.4535556, y: 0.67508966, z: -0.12968326}
-  - {x: 2.5137973, y: 0.61029625, z: -0.18914671}
-  - {x: 2.8741767, y: 0.68140316, z: -0.19011159}
-  - {x: 3.1396847, y: 0.48305863, z: -0.07685802}
-  - {x: 3.1755855, y: 0.6593616, z: -0.12396183}
+  - {x: 0.786348, y: 0.70590645, z: -0.19151278}
+  - {x: 0.91091895, y: 0.7916509, z: 0.10375929}
+  - {x: 1.1765487, y: 0.48258916, z: -0.026870465}
+  - {x: 1.7208261, y: 0.7055241, z: 0.033656146}
+  - {x: 1.9743325, y: 0.72672945, z: -0.009536862}
+  - {x: 1.8708099, y: 0.7463011, z: -0.038774848}
+  - {x: 2.3965206, y: 0.5876592, z: -0.16275625}
+  - {x: 2.6545706, y: 0.69752026, z: -0.17126718}
+  - {x: 2.9778576, y: 0.61703706, z: -0.112992525}
+  - {x: 2.980949, y: 0.81134427, z: 0.08380084}
+  - {x: 3.2369277, y: 0.4811022, z: 0.016633868}
   - {x: 3.59, y: 0.656, z: 0}
   m_Parameters:
     serializedVersion: 3
@@ -778,6 +801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2288661832893907229}
   - component: {fileID: 8384922231886674984}
+  - component: {fileID: 3028575815425974159}
   m_Layer: 0
   m_Name: Erdmaske
   m_TagString: Untagged
@@ -859,6 +883,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &3028575815425974159
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2688417654843540551}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7053f70b0320e4b469c7f5ce07f65b84, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2779240614391479079
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +963,7 @@ MonoBehaviour:
   deactivatedFace: {fileID: 13935603, guid: 7c01c108af785d045baa0f08563ffefa, type: 3}
   activatedFace: {fileID: -501833978, guid: a52e25207e5ca1e468e88d9e4c2cc2a2, type: 3}
   headAngle: 0
+  _animator: {fileID: 6422867184053550571}
 --- !u!114 &422129446840994791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1215,6 +1262,7 @@ MonoBehaviour:
   deactivatedFace: {fileID: 1099021779, guid: 2e9ee6bb50eaa8a4f9fcc1566180b8d8, type: 3}
   activatedFace: {fileID: -1309555466, guid: b75a8bae55e5cd94ea6480d10a1e896a, type: 3}
   headAngle: -90
+  _animator: {fileID: 7474475851528025840}
 --- !u!114 &2571257236539403211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1428,6 +1476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6812611737603257056}
   - component: {fileID: 4928705710921374409}
+  - component: {fileID: 7474475851528025840}
   m_Layer: 0
   m_Name: EisMaske
   m_TagString: Untagged
@@ -1509,6 +1558,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &7474475851528025840
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6032701659532141244}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f789adb9ac1c5541853ae80c8994e08, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6278490346728869328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,6 +1670,7 @@ MonoBehaviour:
   deactivatedFace: {fileID: -790181608, guid: dad214d8fc6e37f448a06043e1e4b289, type: 3}
   activatedFace: {fileID: 173012183, guid: b05344b6ba396464c9fe2de8a057d0e9, type: 3}
   headAngle: 180
+  _animator: {fileID: 7131711676267041122}
 --- !u!114 &7975239033749179405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1886,6 +1958,7 @@ MonoBehaviour:
   deactivatedFace: {fileID: -1575773751, guid: 6b82fae87bc2f394b92c3267fa75fcee, type: 3}
   activatedFace: {fileID: -894832040, guid: a236a0ffaa6c5df4bbe1d4868af41018, type: 3}
   headAngle: 90
+  _animator: {fileID: 3028575815425974159}
 --- !u!114 &139043488910483201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2151,17 +2224,17 @@ LineRenderer:
   m_MaskInteraction: 0
   m_Positions:
   - {x: 0.5, y: 0.656, z: 0}
-  - {x: 0.686146, y: 0.84162205, z: 0.021285415}
-  - {x: 0.9290466, y: 0.5636822, z: 0.15520768}
-  - {x: 1.2286068, y: 0.7854962, z: -0.14595933}
-  - {x: 1.4905885, y: 0.5434123, z: 0.16053271}
-  - {x: 1.8876791, y: 0.82242745, z: 0.04760301}
-  - {x: 1.9640661, y: 0.75351965, z: 0.15472431}
-  - {x: 2.4846938, y: 0.58054733, z: 0.033350207}
-  - {x: 2.3644614, y: 0.6572528, z: 0.041989636}
-  - {x: 2.8285532, y: 0.64118904, z: 0.19914432}
-  - {x: 2.884702, y: 0.7173549, z: 0.004718566}
-  - {x: 3.3854346, y: 0.47259605, z: 0.059673496}
+  - {x: 0.78982514, y: 0.6191136, z: 0.19389296}
+  - {x: 0.86891603, y: 0.76338285, z: 0.08442993}
+  - {x: 1.3730175, y: 0.49608475, z: 0.06575202}
+  - {x: 1.6524483, y: 0.7976191, z: -0.070359446}
+  - {x: 1.8997029, y: 0.50887334, z: 0.07592258}
+  - {x: 2.2258668, y: 0.67348653, z: -0.083555296}
+  - {x: 2.2180035, y: 0.6356576, z: 0.18012929}
+  - {x: 2.6710334, y: 0.82127285, z: 0.01888125}
+  - {x: 2.858383, y: 0.7970829, z: -0.13573575}
+  - {x: 2.919621, y: 0.65213436, z: 0.12586704}
+  - {x: 3.4884493, y: 0.6421945, z: -0.124455646}
   - {x: 3.59, y: 0.656, z: 0}
   m_Parameters:
     serializedVersion: 3
@@ -2324,17 +2397,17 @@ LineRenderer:
   m_MaskInteraction: 0
   m_Positions:
   - {x: 0.5, y: 0.656, z: 0}
-  - {x: 0.94773436, y: 0.71451813, z: -0.01965983}
-  - {x: 0.91036433, y: 0.7471056, z: 0.14405261}
-  - {x: 1.392141, y: 0.59924424, z: 0.14988266}
-  - {x: 1.4615856, y: 0.6207029, z: 0.18459034}
-  - {x: 1.7429031, y: 0.52583414, z: -0.14514814}
-  - {x: 2.1441562, y: 0.54708475, z: -0.13529788}
-  - {x: 2.1609328, y: 0.51500785, z: 0.008943677}
-  - {x: 2.7503142, y: 0.7027452, z: 0.039942145}
-  - {x: 2.687165, y: 0.5455226, z: 0.103959374}
-  - {x: 2.8978071, y: 0.6901634, z: -0.08622982}
-  - {x: 3.4314282, y: 0.82550615, z: 0.038482454}
+  - {x: 0.8966067, y: 0.66293114, z: 0.14353152}
+  - {x: 0.8966811, y: 0.7458299, z: -0.13390756}
+  - {x: 1.2243384, y: 0.7364596, z: -0.1766542}
+  - {x: 1.464209, y: 0.8269564, z: 0.080283634}
+  - {x: 1.8247422, y: 0.6299709, z: -0.19477038}
+  - {x: 1.8745453, y: 0.60541147, z: 0.09157509}
+  - {x: 2.3836174, y: 0.53579265, z: -0.13773203}
+  - {x: 2.3648212, y: 0.6987378, z: 0.00887196}
+  - {x: 2.9285905, y: 0.6129936, z: 0.16065274}
+  - {x: 3.1171725, y: 0.85145503, z: -0.004335761}
+  - {x: 3.3811626, y: 0.79943174, z: -0.13061118}
   - {x: 3.59, y: 0.656, z: 0}
   m_Parameters:
     serializedVersion: 3
@@ -2422,6 +2495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6684946242633415506}
   - component: {fileID: 8042787651349450083}
+  - component: {fileID: 6422867184053550571}
   m_Layer: 0
   m_Name: FeuerMaske
   m_TagString: Untagged
@@ -2503,6 +2577,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &6422867184053550571
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8650331808001170732}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32905efe0bef3d94e862bfcec6e31bfc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9025023808288619517
 GameObject:
   m_ObjectHideFlags: 0

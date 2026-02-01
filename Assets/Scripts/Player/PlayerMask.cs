@@ -2,6 +2,13 @@ using UnityEngine;
 
 public class PlayerMask : MonoBehaviour
 {
+	public enum MaskAnimationState
+	{
+		Off = 0,
+		On,
+		Shoot
+	}
+
 	public MaskComponent maskComponent;
 	public PlayerWeapon playerWeapon;
 	public GameObject activatedEffect;
@@ -26,7 +33,7 @@ public class PlayerMask : MonoBehaviour
 			activatedEffect.SetActive(true);
 		}
 		faceRotator.ApplyFace(headAngle);
-		faceRenderer.sprite = activatedFace;
+		SetAnimationState(MaskAnimationState.On);
 	}
 
 	public void Deactivate()
@@ -36,6 +43,24 @@ public class PlayerMask : MonoBehaviour
 			activatedEffect.SetActive(false);
 		}
 		playerWeapon.Stop();
-		faceRenderer.sprite = deactivatedFace;
+		SetAnimationState(MaskAnimationState.Off);
+	}
+
+		[SerializeField] Animator _animator;
+
+	public void SetAnimationState(MaskAnimationState state)
+	{
+		switch (state)
+		{
+			case MaskAnimationState.Off:
+				_animator.SetInteger("state", 0);
+				break;
+			case MaskAnimationState.On:
+                _animator.SetInteger("state", 1);
+                break;
+            case MaskAnimationState.Shoot:
+                _animator.SetInteger("state", 2);
+                break;
+        }
 	}
 }
