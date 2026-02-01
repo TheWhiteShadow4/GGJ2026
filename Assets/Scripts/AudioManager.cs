@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
+	[SerializeField] AudioClip _backgroundMusic;
+
 	public static AudioManager Instance { get; private set; }
 
 	public float mainMenuMusicReduction = 0.3f;
@@ -30,6 +32,7 @@ public class AudioManager : MonoBehaviour
 	void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 	{
 		SetFilter(scene.buildIndex);
+		PlaySound(_backgroundMusic);
 	}
 
 	void OnDestroy()
@@ -49,5 +52,16 @@ public class AudioManager : MonoBehaviour
 			filter.enabled = false;
 			musicSource.volume = 1f;
 		}
+	}
+
+	public void StopBackgroundMusic() 
+	{
+		musicSource.Stop();
+	}
+
+	public void PlaySound(AudioClip clip) 
+	{
+		musicSource.clip = clip;
+		musicSource.Play();
 	}
 }
