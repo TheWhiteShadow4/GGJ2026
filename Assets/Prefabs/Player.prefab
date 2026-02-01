@@ -85,17 +85,17 @@ LineRenderer:
   m_MaskInteraction: 0
   m_Positions:
   - {x: 0.5, y: 0.656, z: 0}
-  - {x: 0.67240316, y: 0.78042936, z: -0.13143769}
-  - {x: 0.9612716, y: 0.83820224, z: 0.062575005}
-  - {x: 1.3367912, y: 0.7750758, z: 0.14726715}
-  - {x: 1.4341594, y: 0.5260969, z: -0.11806679}
-  - {x: 1.6311829, y: 0.68738616, z: 0.12074728}
-  - {x: 1.9083304, y: 0.6850646, z: -0.14309673}
-  - {x: 2.1241043, y: 0.6849888, z: -0.08564275}
-  - {x: 2.3736665, y: 0.6665917, z: 0.071886584}
-  - {x: 2.9678836, y: 0.78238755, z: 0.0375623}
-  - {x: 3.1104505, y: 0.806596, z: -0.12674427}
-  - {x: 3.2183406, y: 0.61556786, z: 0.15916304}
+  - {x: 0.8518043, y: 0.7726348, z: -0.13229899}
+  - {x: 1.1046175, y: 0.486385, z: 0.056563705}
+  - {x: 1.2757215, y: 0.57844794, z: -0.18432389}
+  - {x: 1.4262831, y: 0.49838158, z: -0.06632679}
+  - {x: 1.6183877, y: 0.6771913, z: -0.10465174}
+  - {x: 2.2105873, y: 0.7136496, z: -0.096215606}
+  - {x: 2.4677532, y: 0.7001803, z: 0.10363121}
+  - {x: 2.5654874, y: 0.59797126, z: -0.19131795}
+  - {x: 2.9628308, y: 0.72342825, z: 0.11971789}
+  - {x: 3.156199, y: 0.50686526, z: 0.10566697}
+  - {x: 3.140757, y: 0.66885734, z: 0.055401463}
   - {x: 3.59, y: 0.656, z: 0}
   m_Parameters:
     serializedVersion: 3
@@ -409,7 +409,7 @@ Transform:
   m_GameObject: {fileID: 2923484673379470938}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.51}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5100002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMask
   maskComponent: {fileID: 2571257236539403211}
   playerWeapon: {fileID: 185403738691004691}
-  headAngle: 0
+  headAngle: 270
   _animator: {fileID: 7853630730365788167}
 --- !u!114 &2571257236539403211
 MonoBehaviour:
@@ -720,8 +720,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4488419626414024801}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.51000005, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071069}
+  m_LocalPosition: {x: -0.5100003, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -843,7 +843,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7867100499401647575}
+  - {fileID: 564806427397504167}
   - {fileID: 1868008693375113507}
   - {fileID: 7832079842241811726}
   - {fileID: 4563187598205270372}
@@ -923,6 +923,7 @@ MonoBehaviour:
   _deathEvent:
     m_PersistentCalls:
       m_Calls: []
+  _showDamageText: 0
   _damageText: {fileID: 3309647578305378082, guid: fa32e9a09b41deb4bb65d4be4044ca43, type: 3}
   _incomingDamageLayers:
     serializedVersion: 2
@@ -1035,7 +1036,7 @@ Transform:
   m_GameObject: {fileID: 6351055199086678674}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.51}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5100002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1174,7 +1175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMask
   maskComponent: {fileID: 7975239033749179405}
   playerWeapon: {fileID: 3982078429345188236}
-  headAngle: 0
+  headAngle: 180
   _animator: {fileID: 3117151344484430806}
 --- !u!114 &7975239033749179405
 MonoBehaviour:
@@ -1223,8 +1224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3808c014ab7c3394ab87dd22baea232e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageComponent
-  _type: 3
-  _damage: 3
   _appliesKnockback: 0
   _knockbackStrength: 0
   _damageDefinition: {fileID: 11400000, guid: 888f449487b513e4db290e70a338f44e, type: 2}
@@ -1272,7 +1271,7 @@ GameObject:
   - component: {fileID: 6732504794612904855}
   - component: {fileID: 7983939663215975685}
   m_Layer: 8
-  m_Name: Model
+  m_Name: CenterSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1286,17 +1285,17 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6535315559401757908}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 333619315589466445}
-  - {fileID: 8958559613006835412}
   - {fileID: 1115339936376837627}
   - {fileID: 3875423731150961218}
-  m_Father: {fileID: 2719692085670332513}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  - {fileID: 8958559613006835412}
+  m_Father: {fileID: 564806427397504167}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!23 &4435276841811681424
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1424,7 +1423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMask
   maskComponent: {fileID: 139043488910483201}
   playerWeapon: {fileID: 1289227429874683290}
-  headAngle: 0
+  headAngle: 90
   _animator: {fileID: 3052906843400340806}
 --- !u!114 &139043488910483201
 MonoBehaviour:
@@ -1572,17 +1571,17 @@ LineRenderer:
   m_MaskInteraction: 0
   m_Positions:
   - {x: 0.5, y: 0.656, z: 0}
-  - {x: 0.76926696, y: 0.7945795, z: 0.14372635}
-  - {x: 1.1271569, y: 0.60058314, z: -0.15604424}
-  - {x: 1.2154218, y: 0.6843148, z: 0.1895794}
-  - {x: 1.4528865, y: 0.8190421, z: -0.08643377}
-  - {x: 1.9019687, y: 0.5998822, z: -0.15410285}
-  - {x: 2.0944135, y: 0.4795748, z: 0.08020257}
-  - {x: 2.2165325, y: 0.83380497, z: -0.031544186}
-  - {x: 2.4141717, y: 0.7877209, z: -0.037198663}
-  - {x: 2.7435493, y: 0.5965019, z: 0.17604342}
-  - {x: 3.2719493, y: 0.6850234, z: -0.019196201}
-  - {x: 3.3122745, y: 0.8017898, z: -0.13541146}
+  - {x: 0.7221584, y: 0.8394273, z: -0.07145212}
+  - {x: 1.1015522, y: 0.49698353, z: -0.08498509}
+  - {x: 1.2275723, y: 0.60841787, z: -0.1889906}
+  - {x: 1.5837332, y: 0.46392578, z: 0.014840293}
+  - {x: 1.7236726, y: 0.48469818, z: -0.08112805}
+  - {x: 2.0832136, y: 0.6881358, z: -0.19366732}
+  - {x: 2.342838, y: 0.75127846, z: -0.17115736}
+  - {x: 2.5308652, y: 0.7704085, z: -0.16143684}
+  - {x: 2.788461, y: 0.6661708, z: 0.19761907}
+  - {x: 3.1689467, y: 0.7705375, z: -0.13436937}
+  - {x: 3.458308, y: 0.5361282, z: 0.09901075}
   - {x: 3.59, y: 0.656, z: 0}
   m_Parameters:
     serializedVersion: 3
@@ -1745,17 +1744,17 @@ LineRenderer:
   m_MaskInteraction: 0
   m_Positions:
   - {x: 0.5, y: 0.656, z: 0}
-  - {x: 0.8533203, y: 0.64509714, z: -0.17521301}
-  - {x: 0.9172854, y: 0.6909896, z: -0.17096077}
-  - {x: 1.2641336, y: 0.5139545, z: -0.14054565}
-  - {x: 1.4249735, y: 0.5645725, z: 0.14356342}
-  - {x: 1.8023001, y: 0.6631452, z: -0.19932361}
-  - {x: 2.1039174, y: 0.4764468, z: -0.065493464}
-  - {x: 2.3300514, y: 0.62697536, z: 0.19595528}
-  - {x: 2.696388, y: 0.7502614, z: -0.1118619}
-  - {x: 2.8041093, y: 0.8100446, z: 0.12685017}
-  - {x: 2.9459875, y: 0.625071, z: 0.14966373}
-  - {x: 3.1585317, y: 0.66632384, z: -0.09812444}
+  - {x: 0.77593696, y: 0.78707516, z: 0.14993124}
+  - {x: 1.05855, y: 0.46095818, z: -0.007878614}
+  - {x: 1.157876, y: 0.74196774, z: -0.1395381}
+  - {x: 1.4980758, y: 0.63582397, z: 0.19640207}
+  - {x: 1.8037899, y: 0.66513944, z: 0.19912587}
+  - {x: 2.0609775, y: 0.8239425, z: -0.10742464}
+  - {x: 2.230927, y: 0.71103495, z: 0.1784615}
+  - {x: 2.4147577, y: 0.5613024, z: 0.09968466}
+  - {x: 2.7014823, y: 0.7016854, z: -0.15637374}
+  - {x: 3.155428, y: 0.8062738, z: -0.10463791}
+  - {x: 3.2589333, y: 0.55633855, z: -0.15702076}
   - {x: 3.59, y: 0.656, z: 0}
   m_Parameters:
     serializedVersion: 3
@@ -1859,8 +1858,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8706665536107627866}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.51000005, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071069}
+  m_LocalPosition: {x: 0.5100003, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1947,6 +1946,38 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &9024397171948636562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 564806427397504167}
+  m_Layer: 8
+  m_Name: Model
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &564806427397504167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024397171948636562}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7867100499401647575}
+  m_Father: {fileID: 2719692085670332513}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &344669992929389545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2070,8 +2101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3808c014ab7c3394ab87dd22baea232e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageComponent
-  _type: 1
-  _damage: 2
   _appliesKnockback: 0
   _knockbackStrength: 0
   _damageDefinition: {fileID: 11400000, guid: dcf56ba321af20043a9f4ac851e339e6, type: 2}
@@ -2092,8 +2121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3808c014ab7c3394ab87dd22baea232e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageComponent
-  _type: 1
-  _damage: 2
   _appliesKnockback: 0
   _knockbackStrength: 0
   _damageDefinition: {fileID: 11400000, guid: dcf56ba321af20043a9f4ac851e339e6, type: 2}
@@ -2114,8 +2141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3808c014ab7c3394ab87dd22baea232e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageComponent
-  _type: 1
-  _damage: 2
   _appliesKnockback: 0
   _knockbackStrength: 0
   _damageDefinition: {fileID: 11400000, guid: dcf56ba321af20043a9f4ac851e339e6, type: 2}

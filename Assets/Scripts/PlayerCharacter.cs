@@ -23,13 +23,21 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
     public float KnockbackCooldown => _knockbackCooldown;
 
     private int currentMaskIndex = -1;
+    private Transform _modelTransform;
+    private Quaternion _targetRotation;
 
     private void Awake()
     {
         _health = GetComponentInChildren<Health>();
         _health.HitEvent.AddListener(GotHit);
         _health.DeathEvent.AddListener(Died);
+        _modelTransform = transform.Find("Model");
 		OnChangeMask(0);
+    }
+
+    private void Update()
+    {
+        _modelTransform.localRotation = Quaternion.Lerp(_modelTransform.localRotation, _targetRotation, Time.deltaTime * 10.0f);
     }
 
     /// <summary>
@@ -74,6 +82,8 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
 
         currentMaskIndex = index;
         _playerMasks[currentMaskIndex].SetAnimationState(MaskAnimationState.On);
+
+        _targetRotation = Quaternion.AngleAxis(_playerMasks[currentMaskIndex].headAngle, _modelTransform.up);
     }
 
 	public void Fire()
