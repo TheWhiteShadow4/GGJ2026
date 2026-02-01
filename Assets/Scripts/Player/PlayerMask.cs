@@ -13,8 +13,6 @@ public class PlayerMask : MonoBehaviour
 	public PlayerWeapon playerWeapon;
 	public GameObject activatedEffect;
 	public SpriteRenderer faceRenderer;
-	public Sprite deactivatedFace;
-	public Sprite activatedFace;
 	public float headAngle;
 
 	void Awake()
@@ -23,7 +21,6 @@ public class PlayerMask : MonoBehaviour
 		{
 			activatedEffect.SetActive(false);
 		}
-		faceRenderer.sprite = deactivatedFace;
 	}
 
 	public void Activate(FaceRotator faceRotator)
