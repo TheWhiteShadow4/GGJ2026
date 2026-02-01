@@ -28,11 +28,10 @@ public class DamageText : MonoBehaviour
     private Color GetElementColor(ElementType element)
         => element switch
         {
-            ElementType.Air => Color.grey,
+            ElementType.Air => Color.yellow,
             ElementType.Water => Color.blue,
             ElementType.Fire => Color.red,
             ElementType.Earth => Color.brown,
-            ElementType.None => Color.white,
-            _ => Color.white,
+            _ => Color.grey,
         };
 }
