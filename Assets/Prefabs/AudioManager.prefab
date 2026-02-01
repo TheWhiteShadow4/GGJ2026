@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2df737db37e29594abaf407c63165b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  _backgroundMusic: {fileID: 8300000, guid: 03a88c7bf7d38af4a8025422b7f0e6a2, type: 3}
   mainMenuMusicReduction: 0.3
 --- !u!82 &5790846714942717457
 AudioSource:
