@@ -4,10 +4,12 @@ public class Savepoint : MonoBehaviour
 {
 	public bool activated = false;
 	public GameObject activatedEffect;
+	public AudioClip saveSound;
 
 	public void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.CompareTag("Player"))
+		if (activated) return;
+		if (other.gameObject.layer == Layers.Player)
 		{
 			GameManager.Instance.SaveGame();
 			activated = true;
@@ -15,6 +17,7 @@ public class Savepoint : MonoBehaviour
 			{
 				activatedEffect.SetActive(true);
 			}
+			GameManager.Instance.PlaySound(saveSound);
 		}
 	}
 }

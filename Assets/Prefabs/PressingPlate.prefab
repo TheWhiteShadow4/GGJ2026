@@ -148,10 +148,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressingPlate
   _autoMove: 1
+  activateSound: {fileID: 8300000, guid: 2eb22d7b97f666e48bfbd953cbaf756f, type: 3}
+  deactivateSound: {fileID: 8300000, guid: e8b3dd7d88ac16f4f94d035f4ab2274c, type: 3}
   moveDirection: {x: 0, y: 0, z: 1}
   moveDistance: 2
   speed: 2
+  delay: 0
   waitTime: 0.5
+  onWaitTime: -1
 --- !u!65 &7931305616069641557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -185,8 +189,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3808c014ab7c3394ab87dd22baea232e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageComponent
-  _type: 0
-  _damage: 10
+  _appliesKnockback: 0
+  _knockbackStrength: 0
+  _damageDefinition: {fileID: 0}
 --- !u!1001 &810777475199351943
 PrefabInstance:
   m_ObjectHideFlags: 0

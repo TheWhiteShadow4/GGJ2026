@@ -224,6 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Savepoint
   activated: 0
   activatedEffect: {fileID: 5069759415289217007}
+  saveSound: {fileID: 8300000, guid: 67a2bb441d0018d48b807387606e1bc8, type: 3}
 --- !u!4 &701717323762616022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1ffcc9070396be5469a09fe816cc178a, type: 3}

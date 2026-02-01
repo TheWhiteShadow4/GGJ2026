@@ -16,11 +16,15 @@ public class LightningCannon : PlayerWeapon
 	private float reScanTimer;
 	private List<TargetObject> hitObjects = new List<TargetObject>();
 	private IDamageSource damageSource;
+	private AudioSource audioSource;
+
+	private bool isFiring = false;
 
 	void Awake()
 	{
 		blitze = GetComponentsInChildren<Blitz>();
 		damageSource = GetComponent<IDamageSource>();
+		audioSource = GetComponent<AudioSource>();
 		foreach (Blitz blitz in blitze)
 		{
 			blitz.enabled = false;
@@ -29,7 +33,10 @@ public class LightningCannon : PlayerWeapon
 
 	public override void Fire()
 	{
+		if (isFiring) return;
+		isFiring = true;
 		reScanTimer = rescanInterval;
+		audioSource.Play();
 		ScanForTargets();
 	}
 
@@ -166,6 +173,8 @@ public class LightningCannon : PlayerWeapon
 			blitz.enabled = false;
 		}
 		hitObjects.Clear();
+		audioSource.Stop();
+		isFiring = false;
 	}
 
 	private struct TargetObject

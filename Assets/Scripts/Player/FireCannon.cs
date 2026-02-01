@@ -9,11 +9,13 @@ public class FireCannon : PlayerWeapon
 	public int fireRate = 96;
 
 	private bool isFiring = false;
+	private AudioSource audioSource;
 
 	void Start()
 	{
 		fireCollider.enabled = false;
 		fireLight.enabled = false;
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	public override void Fire()
@@ -25,6 +27,7 @@ public class FireCannon : PlayerWeapon
 		fireCollider.transform.position = new Vector3(0, 0, 0);
 		fireCollider.enabled = true;
 		fireLight.enabled = true;
+		audioSource.Play();
 	}
 
 	public override void Stop()
@@ -34,5 +37,6 @@ public class FireCannon : PlayerWeapon
 		fireBeam.SetInt("Rate", 0);
 		fireCollider.enabled = false;
 		fireLight.enabled = false;
+		audioSource.Stop();
 	}
 }

@@ -4,6 +4,7 @@ public class Projectile : MonoBehaviour, IProjectile
 {
 	[SerializeField] float _velocity;
 	[SerializeField] float _lifetime;
+	[SerializeField] AudioClip _hitSound;
 	IDamageSource _damageSource;
 
 	/// <inheritdoc cref="IProjectile.DamageSource"/>
@@ -33,17 +34,22 @@ public class Projectile : MonoBehaviour, IProjectile
 
     private void OnTriggerEnter(Collider other)
     {
+		if (_hitSound != null)
+		{
+			GameManager.Instance.PlaySound(_hitSound);
+		}
         DestroySelf();
     }
 
 	private void OnCollisionEnter(Collision collision)
 	{
-		DestroySelf();
+		OnTriggerEnter(collision.collider);
 	}
 
 	void DestroySelf()
 	{
 		lifetimer = 0;
+
 		Pool.SafeDestroy(gameObject);
 	}
 }

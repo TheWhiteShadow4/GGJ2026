@@ -4,6 +4,8 @@ using UnityEngine;
 public class PressingPlate : MonoBehaviour
 {
     [SerializeField] bool _autoMove = true;
+	public AudioClip activateSound;
+	public AudioClip deactivateSound;
 
     public Vector3 moveDirection = Vector3.forward;
     public float moveDistance = 2f;
@@ -32,6 +34,17 @@ public class PressingPlate : MonoBehaviour
 		if (delay > 0f)
 		{
 			yield return new WaitForSeconds(delay);
+		}
+		if (activateSound != null)
+		{
+			if (movingForward || deactivateSound == null)
+			{
+				GameManager.Instance.PlaySound(activateSound);
+			}
+			else
+			{
+				GameManager.Instance.PlaySound(deactivateSound);
+			}
 		}
         while (true)
         {

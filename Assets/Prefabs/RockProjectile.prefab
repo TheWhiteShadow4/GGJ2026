@@ -51,7 +51,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   _velocity: 15
-  _lifetime: 4
+  _lifetime: 2.5
+  _hitSound: {fileID: 8300000, guid: 7d1ca66bcacc4314f9b05a7bd163e137, type: 3}
 --- !u!135 &6989168562276258249
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -145,6 +146,7 @@ MonoBehaviour:
   dispersion: 5
   spread: 360
   projectileCount: 16
+  fireSound: {fileID: 0}
 --- !u!1 &7234794610653600162
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class IceCannon : PlayerWeapon
 	public float dispersion = 5f; // Abweichung eines Projektils
 	public float spread = 60; // Winkelverteilung aller Projektile
 	public int projectileCount = 12;
+	public AudioClip fireSound;
 
 	private Pool pool;
 
@@ -28,6 +29,8 @@ public class IceCannon : PlayerWeapon
 	{
 		if (cooldown > 0) return;
 		cooldown = interval;
+		
+		GameManager.Instance.PlaySound(fireSound);
 		
 		for (int i = 0; i < projectileCount; i++)
 		{

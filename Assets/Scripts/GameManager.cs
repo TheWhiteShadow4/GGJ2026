@@ -49,8 +49,8 @@ public class GameManager : MonoBehaviour
 		audioSource.PlayOneShot(clip, volume);
 	}
 
-	public void PlaySound(AudioClip clip, Vector3 position, float volume = 1f)
+	/*public void PlaySound(AudioClip clip, Vector3 position, float volume = 1f)
 	{
 		AudioSource.PlayClipAtPoint(clip, position, volume);
-	}
+	}*/
 }

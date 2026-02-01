@@ -49,7 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   _velocity: 10
-  _lifetime: 4
+  _lifetime: 1.5
+  _hitSound: {fileID: 0}
 --- !u!135 &6989168562276258249
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -83,8 +84,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3808c014ab7c3394ab87dd22baea232e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageComponent
-  _type: 4
-  _damage: 1
   _appliesKnockback: 0
   _knockbackStrength: 0
   _damageDefinition: {fileID: 11400000, guid: 2431dae3d205af448b2508177338a20b, type: 2}
