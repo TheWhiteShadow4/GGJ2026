@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 	public bool wasLoaded = false;
 	public Controls controls;
 
+	private AudioSource audioSource;
+
     void Awake()
 	{
 		if (Instance != null)
@@ -22,6 +24,7 @@ public class GameManager : MonoBehaviour
 		GameProgress.Current = new GameProgress(20);
 		controls = new Controls();
 		controls.Enable();
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	public void SaveGame()
@@ -39,5 +42,15 @@ public class GameManager : MonoBehaviour
 		}
 		GameProgress.Current = JsonUtility.FromJson<GameProgress>(saveGame);
 		wasLoaded = true;
+	}
+
+	public void PlaySound(AudioClip clip, float volume = 1f)
+	{
+		audioSource.PlayOneShot(clip, volume);
+	}
+
+	public void PlaySound(AudioClip clip, Vector3 position, float volume = 1f)
+	{
+		AudioSource.PlayClipAtPoint(clip, position, volume);
 	}
 }
