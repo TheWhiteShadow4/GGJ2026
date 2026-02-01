@@ -7,6 +7,8 @@ public class Health : MonoBehaviour, IHealth
     [SerializeField] float _maxHp;
     [SerializeField] UnityEvent<ElementType, float> _hitEvent;
     [SerializeField] UnityEvent _deathEvent;
+	[SerializeField] AudioClip _hitSound;
+	[SerializeField] AudioClip _deathSound;
     ICharacter _character;
 
     [SerializeField] bool _showDamageText;
@@ -42,10 +44,18 @@ public class Health : MonoBehaviour, IHealth
         _hitEvent?.Invoke(damage.Type, dmg);
         if (_hp <= 0)
         {
+			if (_deathSound != null)
+			{
+				GameManager.Instance.PlaySound(_deathSound);
+			}
             _deathEvent?.Invoke();
         }
         else
         {
+			if (_hitSound != null)
+			{
+				GameManager.Instance.PlaySound(_hitSound);
+			}
             if (_showDamageText)
             {
                 var go = GameObject.Instantiate(_damageText);
