@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageComponent
   _appliesKnockback: 1
-  _knockbackStrength: 0.5
+  _knockbackStrength: 8
   _damageDefinition: {fileID: 11400000, guid: 85db7f70551c1374c8e0886c3a152d81, type: 2}
 --- !u!54 &1466936369742036481
 Rigidbody:
