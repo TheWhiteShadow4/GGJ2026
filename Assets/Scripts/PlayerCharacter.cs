@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerCharacter : MonoBehaviour, IPlayer
 {
 	[SerializeField] PlayerMask[] _playerMasks;
+	public FaceRotator faceRotator;
 
     Health _health;
 
@@ -72,7 +73,7 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
 		}
             
         currentMaskIndex = index;
-		_playerMasks[currentMaskIndex].Activate();
+		_playerMasks[currentMaskIndex].Activate(faceRotator);
 	}
 
 	public void Fire()
