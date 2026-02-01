@@ -137,6 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShootComponent
   _projectile: {fileID: 9119182535081151946, guid: 0a1371f3d4f2c4440914f63974783ae9, type: 3}
   _aim: {fileID: 3880075494402731514}
+  _shootingSpeed: 3
 --- !u!1001 &2050813653533708210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -145,6 +146,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4898506157269805961, guid: 8b068c0abbc2b2045889fbdfc5bdcacd, type: 3}
+      propertyPath: _speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 438141643102147234, guid: 8b068c0abbc2b2045889fbdfc5bdcacd, type: 3}
       propertyPath: _air
       value: 2

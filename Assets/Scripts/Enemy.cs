@@ -20,7 +20,6 @@ public class Enemy : MonoBehaviour, IEnemy
     /// <inheritdoc cref="IKnockbackTarget.KnockbackCooldown"/>
     public float KnockbackCooldown => _knockbackCooldown;
 
-    [SerializeField] bool _drawGizmos = false;
     [SerializeField] float _aggressionRange = 20f;
     [SerializeField] float _speed = 1f;
     [SerializeField] float _fireRate = 1f;
@@ -138,9 +137,8 @@ public class Enemy : MonoBehaviour, IEnemy
         Debug.Log($"{type.GetEfficience(Resistance.Element)}! - Enemy got {damage} {type} damage. {Health.Hp} HP left.");
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
-        if (!_drawGizmos) return;
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, _aggressionRange);
     }
