@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: DamageWaterMask
   m_EditorClassIdentifier: Assembly-CSharp::DamageDefinition
   _element: 2
-  _damage: 13.4
+  _damage: 50

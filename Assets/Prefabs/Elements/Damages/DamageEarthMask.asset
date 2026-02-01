@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: DamageEarthMask
   m_EditorClassIdentifier: Assembly-CSharp::DamageDefinition
   _element: 4
-  _damage: 59.1
+  _damage: 30

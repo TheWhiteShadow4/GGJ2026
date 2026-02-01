@@ -25,14 +25,14 @@ public class Health : MonoBehaviour, IHealth
 
     private void Awake()
     {
-        _character = transform.root.GetComponentInChildren<ICharacter>();
+        _character = transform.GetComponent<ICharacter>();
     }
 
     public void DoDamage(IDamageSource damage)
     {
         if (!enabled) return;
 
-        var multiplier = _character.Resistance.GetMultiplier(damage.Type);
+        var multiplier = 1 / _character.Resistance.GetMultiplier(damage.Type);
         var dmg = damage.Damage * multiplier;
         _hp -= dmg;
 
