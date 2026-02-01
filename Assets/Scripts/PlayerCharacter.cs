@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCharacter : MonoBehaviour, IPlayer
 {
@@ -48,9 +49,10 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
     public void Died()
     {
         Debug.Log("Player Died");
-        // Death animation ?
         gameObject.transform.root.GetComponentInChildren<PlayerController>().enabled = false;
-        // Go back to main menu
+
+        // TODO: Show GameOver ui or link to it
+        Invoke(nameof(BackToMainMenuBecauseOfDeath), 3f);
     }
 
     /// <summary>
@@ -95,4 +97,9 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
 	{
 		_playerMasks[currentMaskIndex].playerWeapon.Stop();
 	}
+
+    private void BackToMainMenuBecauseOfDeath() 
+    {
+        SceneManager.LoadScene(0);
+    }
 }
