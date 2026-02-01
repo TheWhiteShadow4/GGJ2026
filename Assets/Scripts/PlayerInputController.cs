@@ -6,7 +6,6 @@ public class PlayerInputController
 {
 	public Vector2 moveDirection;
 	[HideInInspector] public Vector3 mouseTarget;
-	private Vector2 lookDirection;
 	private Camera camera;
 
 	public Action<int> OnChangeWeapon;
@@ -43,9 +42,9 @@ public class PlayerInputController
 
 	private void OnLook(InputAction.CallbackContext context)
 	{
-		lookDirection = context.ReadValue<Vector2>();
-		lookDirection += PlayerController.Current.transform.position.Vec2();
-		PlayerController.Current.transform.LookAt(lookDirection);
+		Vector2 v = context.ReadValue<Vector2>();
+		float rotY = Mathf.Atan2(-v.y, v.x) * Mathf.Rad2Deg;
+		PlayerController.Current.transform.rotation = Quaternion.Euler(0, rotY + 90, 0);
 	}
 
 	private void OnLookAt(InputAction.CallbackContext context)
