@@ -9,6 +9,9 @@ public class Health : MonoBehaviour, IHealth
     [SerializeField] UnityEvent _deathEvent;
     ICharacter _character;
 
+    [SerializeField] bool _showDamageText;
+    [SerializeField] GameObject _damageText;
+
     [SerializeField] LayerMask _incomingDamageLayers;
 
     /// <inheritdoc cref="IHealth.MaxHp"/>
@@ -37,6 +40,15 @@ public class Health : MonoBehaviour, IHealth
         if (_hp <= 0)
         {
             _deathEvent?.Invoke();
+        }
+        else
+        {
+            if (_showDamageText)
+            {
+                var go = GameObject.Instantiate(_damageText);
+                go.transform.position = transform.position;
+                go.GetComponent<DamageText>().OnHit(damage.Type, dmg);
+            }
         }
     }
 

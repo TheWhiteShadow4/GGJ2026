@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour, IEnemy
     [SerializeField] float _aggressionRange = 20f;
     [SerializeField] float _speed = 1f;
     [SerializeField] float _fireRate = 1f;
+    [SerializeField] float _pivotAngle = 45f;
 
     private bool _aggro = false;
     private PlayerCharacter _player;
@@ -63,7 +64,16 @@ public class Enemy : MonoBehaviour, IEnemy
         if (_aggro)
         {
             //TODO add more dynamic pathfinding in case we use more complex level with walls and obstacles
-            //transform.LookAt(_player.gameObject.transform.position);
+
+            float pivotAngle = Vector3.SignedAngle(-1 * Vector3.forward, playerDir, Vector3.up);
+            if (pivotAngle > 90)
+                pivotAngle = (180.0f - pivotAngle);
+            else if (pivotAngle < -90)
+                pivotAngle = (-180.0f - pivotAngle);
+
+            pivotAngle = Mathf.Clamp(pivotAngle, -1 * _pivotAngle, _pivotAngle);
+            Vector3 lookDirection = Quaternion.AngleAxis(pivotAngle, Vector3.up) * (- 1.0f * Vector3.forward);
+            transform.rotation = Quaternion.LookRotation(lookDirection);
 
             if (HasShootComponent)
             {
