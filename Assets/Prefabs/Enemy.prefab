@@ -201,6 +201,8 @@ MonoBehaviour:
   _deathEvent:
     m_PersistentCalls:
       m_Calls: []
+  _hitSound: {fileID: 8300000, guid: 5451123cd3042f54c82980a616a29f6d, type: 3}
+  _deathSound: {fileID: 8300000, guid: aeac0ec1492bf544bb433d79e24b80a6, type: 3}
   _showDamageText: 1
   _damageText: {fileID: 3309647578305378082, guid: fa32e9a09b41deb4bb65d4be4044ca43, type: 3}
   _incomingDamageLayers:
