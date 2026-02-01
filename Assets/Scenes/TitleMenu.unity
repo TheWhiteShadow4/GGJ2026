@@ -322,8 +322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d691b2f7734b9f741ad529f2dc0c0f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: TWS.Settings::TWS.Settings.MenuSlider
-  valueText: {fileID: 1732731725}
-  formatString: '{0}%'
 --- !u!114 &533979709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,9 +334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74a3423a00a1b6b4ea72c2efa0a5542a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: TWS.Settings::TWS.Settings.AudioSetting
-  playerPrefKey: Sound
-  audioMixer: {fileID: 24100000, guid: da9dcfefa6cd59e47823901578f3d77e, type: 2}
-  defaultValue: 80
 --- !u!114 &533979710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2242,9 +2237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74a3423a00a1b6b4ea72c2efa0a5542a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: TWS.Settings::TWS.Settings.AudioSetting
-  playerPrefKey: Music
-  audioMixer: {fileID: 24100000, guid: da9dcfefa6cd59e47823901578f3d77e, type: 2}
-  defaultValue: 80
 --- !u!114 &1654602040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2257,8 +2249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d691b2f7734b9f741ad529f2dc0c0f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: TWS.Settings::TWS.Settings.MenuSlider
-  valueText: {fileID: 1451804716}
-  formatString: '{0}%'
 --- !u!1 &1661595881
 GameObject:
   m_ObjectHideFlags: 0
@@ -2994,6 +2984,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9129680635694742927, guid: 1366b247d82227f4cb0cca9fa3b76c5c, type: 3}
+      propertyPath: _backgroundMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 03a88c7bf7d38af4a8025422b7f0e6a2, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -18,8 +18,11 @@ public class PressingPlate : MonoBehaviour
     private Vector3 targetPos;
     private bool movingForward = true;
 
+	private AudioSource audioSource;
+
     void Start()
     {
+		audioSource = GetComponent<AudioSource>();
         startPos = transform.localPosition;
         targetPos = startPos + moveDirection.normalized * moveDistance;
 
@@ -35,19 +38,19 @@ public class PressingPlate : MonoBehaviour
 		{
 			yield return new WaitForSeconds(delay);
 		}
-		if (activateSound != null)
-		{
-			if (movingForward || deactivateSound == null)
-			{
-				GameManager.Instance.PlaySound(activateSound);
-			}
-			else
-			{
-				GameManager.Instance.PlaySound(deactivateSound);
-			}
-		}
         while (true)
         {
+			if (activateSound != null)
+			{
+				if (movingForward || deactivateSound == null)
+				{
+					audioSource.PlayOneShot(activateSound);
+				}
+				else
+				{
+					audioSource.PlayOneShot(deactivateSound);
+				}
+			}
             Vector3 destination = movingForward ? targetPos : startPos;
 
             while (Vector3.Distance(transform.localPosition, destination) > 0.01f)
