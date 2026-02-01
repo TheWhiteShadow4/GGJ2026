@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour, IPlayer
@@ -28,6 +29,7 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
 
     [SerializeField] float inactiveMaskSize = 1.0f;
     [SerializeField] float activeMaskSize = 1.2f;
+    private ParticleSystem _smokeParticleSystem;
 
     private void Awake()
     {
@@ -35,6 +37,7 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
         _health.HitEvent.AddListener(GotHit);
         _health.DeathEvent.AddListener(Died);
         _modelTransform = transform.Find("Model");
+        _smokeParticleSystem = GetComponentsInChildren<ParticleSystem>().Where(ps => ps.transform.gameObject.name == "SmokeEmitter").First();
 		OnChangeMask(0);
     }
 
@@ -87,6 +90,12 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
         currentMaskIndex = index;
         _playerMasks[currentMaskIndex].SetAnimationState(MaskAnimationState.On);
         _playerMasks[currentMaskIndex].SetMaskSize(activeMaskSize);
+
+        var colorOverTime = _smokeParticleSystem.colorOverLifetime;
+        colorOverTime.enabled = true;
+        Gradient gradient = new Gradient();
+        gradient.SetKeys(new GradientColorKey[] { new GradientColorKey(_playerMasks[currentMaskIndex].smokeColor, 0.0f), new GradientColorKey(_playerMasks[currentMaskIndex].smokeColor, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(1.0f, 1.0f) });
+        colorOverTime.color = gradient;
 
         _targetRotation = Quaternion.AngleAxis(_playerMasks[currentMaskIndex].headAngle, _modelTransform.up);
     }
