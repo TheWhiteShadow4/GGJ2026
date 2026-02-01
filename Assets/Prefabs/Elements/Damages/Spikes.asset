@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b5affea37ef37e44a91541b4af7eebf, type: 3}
-  m_Name: ProjectileDamageEarth
+  m_Name: Spikes
   m_EditorClassIdentifier: Assembly-CSharp::DamageDefinition
-  _element: 4
-  _damage: 5
+  _element: 0
+  _damage: 100

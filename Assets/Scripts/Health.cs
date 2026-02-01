@@ -32,8 +32,11 @@ public class Health : MonoBehaviour, IHealth
     {
         if (!enabled) return;
 
+        // randomize the damage with +/- 10%
+        var randomDmg = Random.Range(-1f, 1f) * (damage.Damage * 0.1f) + damage.Damage;
+
         var multiplier = 1 / _character.Resistance.GetMultiplier(damage.Type);
-        var dmg = damage.Damage * multiplier;
+        var dmg = randomDmg * multiplier;
         _hp -= dmg;
 
         _hitEvent?.Invoke(damage.Type, dmg);

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: DamageEarthSplitter
   m_EditorClassIdentifier: Assembly-CSharp::DamageDefinition
   _element: 4
-  _damage: 5
+  _damage: 10
