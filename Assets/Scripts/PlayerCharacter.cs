@@ -67,8 +67,12 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
 	{
         // Stop current mask - needed at least for the initial one
         if (currentMaskIndex >= 0)
-            Stop();
+		{
+			_playerMasks[currentMaskIndex].Deactivate();
+		}
+            
         currentMaskIndex = index;
+		_playerMasks[currentMaskIndex].Activate();
 	}
 
 	public void Fire()
