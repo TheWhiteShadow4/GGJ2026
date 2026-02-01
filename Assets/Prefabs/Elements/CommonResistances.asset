@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CommonResistances
   m_EditorClassIdentifier: Assembly-CSharp::ElementTypesDefinition
   _element: 0
-  _fireResistance: 30
-  _waterResistance: 30
-  _airResistance: 30
-  _earthResistance: 30
+  _fireResistance: 1
+  _waterResistance: 1
+  _airResistance: 1
+  _earthResistance: 1
