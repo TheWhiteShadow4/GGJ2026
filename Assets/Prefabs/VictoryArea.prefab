@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51526739268e57046828f112097477de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VictoryArea
+  _victorySound: {fileID: 8300000, guid: 35ae3da4e2da4a6488ccb6aea0b110c4, type: 3}
 --- !u!65 &4870595577007169589
 BoxCollider:
   m_ObjectHideFlags: 0
