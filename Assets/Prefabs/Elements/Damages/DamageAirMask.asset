@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: DamageAirMask
   m_EditorClassIdentifier: Assembly-CSharp::DamageDefinition
   _element: 3
-  _damage: 3
+  _damage: 50
