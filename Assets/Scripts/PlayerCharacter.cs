@@ -26,6 +26,9 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
     private Transform _modelTransform;
     private Quaternion _targetRotation;
 
+    [SerializeField] float inactiveMaskSize = 1.0f;
+    [SerializeField] float activeMaskSize = 1.2f;
+
     private void Awake()
     {
         _health = GetComponentInChildren<Health>();
@@ -78,10 +81,12 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
         {
             Stop();
             _playerMasks[currentMaskIndex].SetAnimationState(MaskAnimationState.Off);
+            _playerMasks[currentMaskIndex].SetMaskSize(inactiveMaskSize);
         }
 
         currentMaskIndex = index;
         _playerMasks[currentMaskIndex].SetAnimationState(MaskAnimationState.On);
+        _playerMasks[currentMaskIndex].SetMaskSize(activeMaskSize);
 
         _targetRotation = Quaternion.AngleAxis(_playerMasks[currentMaskIndex].headAngle, _modelTransform.up);
     }

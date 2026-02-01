@@ -30,4 +30,9 @@ public class PlayerMask : MonoBehaviour
                 break;
         }
 	}
+
+	public void SetMaskSize(float size)
+	{
+		_animator.gameObject.transform.localScale = new Vector3(size, size, size);
+	}
 }
