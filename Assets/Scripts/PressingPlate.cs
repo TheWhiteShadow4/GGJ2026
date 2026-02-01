@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[SelectionBase]
 public class PressingPlate : MonoBehaviour
 {
     [SerializeField] bool _autoMove = true;
@@ -7,7 +8,9 @@ public class PressingPlate : MonoBehaviour
     public Vector3 moveDirection = Vector3.forward;
     public float moveDistance = 2f;
     public float speed = 2f;
+	public float delay = 0f;
     public float waitTime = 0.5f;
+	public float onWaitTime = -1f;
 
     private Vector3 startPos;
     private Vector3 targetPos;
@@ -15,7 +18,7 @@ public class PressingPlate : MonoBehaviour
 
     void Start()
     {
-        startPos = transform.position;
+        startPos = transform.localPosition;
         targetPos = startPos + moveDirection.normalized * moveDistance;
 
         if (_autoMove)
@@ -26,14 +29,18 @@ public class PressingPlate : MonoBehaviour
 
     System.Collections.IEnumerator MovePlate()
     {
+		if (delay > 0f)
+		{
+			yield return new WaitForSeconds(delay);
+		}
         while (true)
         {
             Vector3 destination = movingForward ? targetPos : startPos;
 
-            while (Vector3.Distance(transform.position, destination) > 0.01f)
+            while (Vector3.Distance(transform.localPosition, destination) > 0.01f)
             {
-                transform.position = Vector3.MoveTowards(
-                    transform.position,
+                transform.localPosition = Vector3.MoveTowards(
+                    transform.localPosition,
                     destination,
                     speed * Time.deltaTime
                 );
@@ -42,12 +49,19 @@ public class PressingPlate : MonoBehaviour
 
             if (!_autoMove) break;
 
-            yield return new WaitForSeconds(waitTime);
+			if (movingForward && onWaitTime > 0f)
+			{
+				yield return new WaitForSeconds(onWaitTime);
+			}
+			else
+			{
+				yield return new WaitForSeconds(waitTime);
+			}
             movingForward = !movingForward;
         }
     }
 
-    public void OnSwitchToggled(bool on) 
+    public void OnSwitchToggled(bool on)
     {
         if (_autoMove) return;
 
