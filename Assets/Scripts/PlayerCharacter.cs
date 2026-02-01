@@ -11,6 +11,8 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
     [SerializeField] float _knockbackCooldown = 0.5f;
     private float? _lastKnockbackTime = null;
 
+    [SerializeField] HealthUi _healthBar;
+
     /// <inheritdoc cref="IPlayer.Health"/>
     public IHealth Health => _health;
 
@@ -31,6 +33,13 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
         _health.HitEvent.AddListener(GotHit);
         _health.DeathEvent.AddListener(Died);
 		OnChangeMask(0);
+
+        _healthBar = GameObject.FindFirstObjectByType<HealthUi>();
+    }
+
+    private void Start()
+    {
+        _healthBar?.SetMaxHealth(_health.MaxHp);
     }
 
     /// <summary>
@@ -39,7 +48,7 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
     public void Died()
     {
         Debug.Log("Player Died");
-        // Deatzh animation ?
+        // Death animation ?
         gameObject.transform.root.GetComponentInChildren<PlayerController>().enabled = false;
         // Go back to main menu
     }
@@ -51,6 +60,7 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
     /// <param name="damage">Damage type.</param>
     public void GotHit(ElementType type, float damage)
     {
+        _healthBar?.SetHealth(_health.Hp);
         Debug.Log($"{type.GetEfficience(Resistance.Element)}! - Player got {damage} {type} damage. {Health.Hp} HP left.");
     }
 

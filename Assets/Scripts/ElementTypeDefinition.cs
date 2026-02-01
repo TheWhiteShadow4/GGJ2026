@@ -10,7 +10,6 @@ public class ElementTypeDefinition : ScriptableObject
     [Header("Air - Weakness: Fire, Strength: Earth")]
     [Header("Earth - Weakness: Air, Strength: Water")]
     [Space]
-    [Header("HealthDamage = IncomingDamage / Resistance -> Resistance: (0, 100] -> HealthDamage [hoch, niedrig]")]
     [SerializeField, Range(0.1f, 100f)] float _fireResistance = 1f;
     [SerializeField, Range(0.1f, 100f)] float _waterResistance = 1f;
     [SerializeField, Range(0.1f, 100f)] float _airResistance = 1f;

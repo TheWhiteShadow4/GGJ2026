@@ -1243,6 +1243,7 @@ MonoBehaviour:
   faceRotator: {fileID: 5080166393722846438}
   _knockbackResistance: 0
   _knockbackCooldown: 1
+  _healthBar: {fileID: 0}
 --- !u!114 &8877116226689860403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1255,8 +1256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2249a29f29538f748a74a7b04f9884c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  _hp: 10000
-  _maxHp: 10000
+  _hp: 1000
+  _maxHp: 1000
   _hitEvent:
     m_PersistentCalls:
       m_Calls: []

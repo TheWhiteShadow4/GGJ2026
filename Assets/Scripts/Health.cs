@@ -17,6 +17,8 @@ public class Health : MonoBehaviour, IHealth
     /// <inheritdoc cref="IHealth.Hp"/>
     public float Hp => _hp;
 
+    public float MaxHp => _maxHp;
+
     public UnityEvent<ElementType, float> HitEvent => _hitEvent;
 
     public UnityEvent DeathEvent => _deathEvent;

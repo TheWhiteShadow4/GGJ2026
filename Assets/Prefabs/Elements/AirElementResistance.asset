@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AirElementResistance
   m_EditorClassIdentifier: Assembly-CSharp::ElementTypesDefinition
   _element: 3
-  _fireResistance: 20.6
+  _fireResistance: 41.6
   _waterResistance: 2.8
   _airResistance: 4.6
   _earthResistance: 1.4

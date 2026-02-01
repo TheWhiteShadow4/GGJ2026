@@ -193,8 +193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2249a29f29538f748a74a7b04f9884c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  _hp: 1000
-  _maxHp: 1000
+  _hp: 3000
+  _maxHp: 3000
   _hitEvent:
     m_PersistentCalls:
       m_Calls: []
