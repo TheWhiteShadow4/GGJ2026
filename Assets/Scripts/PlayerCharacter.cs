@@ -50,7 +50,7 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
     /// <param name="damage">Damage type.</param>
     public void GotHit(ElementType type, float damage)
     {
-        Debug.Log($"Got {damage} {type} damage. {Health.Hp} HP left.");
+        Debug.Log($"{type.GetEfficience(Resistance.Element)}! - Player got {damage} {type} damage. {Health.Hp} HP left.");
     }
 
     public void ApplyKnockback(Vector3 direction, float strength)

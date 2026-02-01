@@ -14,9 +14,6 @@ public class Health : MonoBehaviour, IHealth
 
     [SerializeField] LayerMask _incomingDamageLayers;
 
-    /// <inheritdoc cref="IHealth.MaxHp"/>
-    public float MaxHp => _maxHp;
-
     /// <inheritdoc cref="IHealth.Hp"/>
     public float Hp => _hp;
 
@@ -33,7 +30,8 @@ public class Health : MonoBehaviour, IHealth
     {
         if (!enabled) return;
 
-        var dmg = damage.Damage / _character.Resistance.GetMultiplier(damage.Type);
+        var multiplier = _character.Resistance.GetMultiplier(damage.Type);
+        var dmg = damage.Damage * multiplier;
         _hp -= dmg;
 
         _hitEvent?.Invoke(damage.Type, dmg);

@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcb2436db4e608f4882804a8266287fa, type: 3}
-  m_Name: WaterElementResistance
-  m_EditorClassIdentifier: Assembly-CSharp::ElementTypesDefinition
+  m_Script: {fileID: 11500000, guid: 8b5affea37ef37e44a91541b4af7eebf, type: 3}
+  m_Name: ProjectileDamageWater
+  m_EditorClassIdentifier: Assembly-CSharp::DamageDefinition
   _element: 2
-  _fireResistance: 1.2
-  _waterResistance: 3.5
-  _airResistance: 4.8
-  _earthResistance: 11.1
+  _damage: 25
