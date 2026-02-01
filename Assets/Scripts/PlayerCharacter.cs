@@ -67,17 +67,24 @@ public class PlayerCharacter : MonoBehaviour, IPlayer
 	{
         // Stop current mask - needed at least for the initial one
         if (currentMaskIndex >= 0)
+        {
             Stop();
+            _playerMasks[currentMaskIndex].SetAnimationState(MaskAnimationState.Off);
+        }
+
         currentMaskIndex = index;
-	}
+        _playerMasks[currentMaskIndex].SetAnimationState(MaskAnimationState.On);
+    }
 
 	public void Fire()
 	{
 		_playerMasks[currentMaskIndex].playerWeapon.Fire();
+        _playerMasks[currentMaskIndex].SetAnimationState(MaskAnimationState.Shoot);
 	}
 
 	public void Stop()
 	{
 		_playerMasks[currentMaskIndex].playerWeapon.Stop();
-	}
+        _playerMasks[currentMaskIndex].SetAnimationState(MaskAnimationState.On);
+    }
 }
