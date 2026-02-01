@@ -202,6 +202,8 @@ MonoBehaviour:
   _deathEvent:
     m_PersistentCalls:
       m_Calls: []
+  _showDamageText: 1
+  _damageText: {fileID: 3309647578305378082, guid: fa32e9a09b41deb4bb65d4be4044ca43, type: 3}
   _incomingDamageLayers:
     serializedVersion: 2
     m_Bits: 1024
